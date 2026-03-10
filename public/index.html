@@ -91,8 +91,8 @@
     }
 
     .nav-logo-img {
-      height: 45px;
-      width: 45px;
+      height: 28px;
+      width: 28px;
       object-fit: contain;
       mix-blend-mode: lighten;
     }
@@ -123,6 +123,10 @@
     }
 
     .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-links a.active {
       color: var(--teal);
     }
 
@@ -171,6 +175,10 @@
 
     .mobile-menu a:hover,
     .mobile-menu a:active {
+      color: var(--teal);
+    }
+
+    .mobile-menu a.active {
       color: var(--teal);
     }
 
@@ -1830,8 +1838,9 @@
 
       <!-- <a href="#cycle">Project Cycle</a>
     <a href="#game">The Game</a> -->
-      <a href="#">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="#routes">Routes</a>
+      <a href="playbook.html">Playbook</a>
       <a href="program.html">Program</a>
 
       <a href="about.html">Co-Pilot</a>
@@ -1849,14 +1858,12 @@
         alt="Pragmatic Step">
       <span class="mobile-logo-text">PRAGMATIC<span>STEP</span></span>
     </div>
-    <!-- <a href="#belief" onclick="closeMenu()">Our Belief</a>
-    <a href="#advantage" onclick="closeMenu()">Advantage</a>
+    <a href="index.html" onclick="closeMenu()" class="active">Home</a>
     <a href="#routes" onclick="closeMenu()">Routes</a>
-    <a href="#cycle" onclick="closeMenu()">Project Cycle</a>
-    <a href="#game" onclick="closeMenu()">The Game</a> -->
+    <a href="playbook.html" onclick="closeMenu()">Playbook</a>
     <a href="program.html" onclick="closeMenu()">Program</a>
     <a href="about.html" onclick="closeMenu()">Co-Pilot</a>
-    <a href="#contact" onclick="closeMenu()" class="mobile-cta">Book Discovery Call</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
   </div>
 
   <section id="hero">
@@ -2488,6 +2495,41 @@
   <script>
     function openMenu() { document.getElementById('mobileMenu').classList.add('open'); }
     function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+    function getMenuKeyFromHref(href) {
+      if (!href) return '';
+      if (href === '#' || href === 'index.html') return 'home';
+      if (href === '#routes' || href === 'index.html#routes') return 'routes';
+      if (href === '#contact' || href === 'index.html#contact') return 'contact';
+      return '';
+    }
+    function getCurrentMenuKey() {
+      var hash = (window.location.hash || '').toLowerCase();
+      if (hash === '#routes') return 'routes';
+      if (hash === '#contact') return 'contact';
+      return 'home';
+    }
+    function syncMenuActive() {
+      var currentKey = getCurrentMenuKey();
+      document.querySelectorAll('#mainNav .nav-links a, #mobileMenu a').forEach(function (link) {
+        var linkKey = getMenuKeyFromHref(link.getAttribute('href'));
+        if (!linkKey) return;
+        link.classList.toggle('active', linkKey === currentKey);
+      });
+    }
+    document.querySelectorAll('#mainNav .nav-links a, #mobileMenu a').forEach(function (link) {
+      var linkKey = getMenuKeyFromHref(link.getAttribute('href'));
+      if (!linkKey) return;
+      link.addEventListener('click', function () {
+        // Immediate feedback before hash navigation settles.
+        document.querySelectorAll('#mainNav .nav-links a, #mobileMenu a').forEach(function (node) {
+          var nodeKey = getMenuKeyFromHref(node.getAttribute('href'));
+          if (!nodeKey) return;
+          node.classList.toggle('active', nodeKey === linkKey);
+        });
+      });
+    });
+    window.addEventListener('hashchange', syncMenuActive);
+    syncMenuActive();
     var cur = document.getElementById('cursor'), ring = document.getElementById('cursorRing'), mx = 0, my = 0, rx = 0, ry = 0;
     if (cur && window.matchMedia('(pointer:fine)').matches) {
       document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; cur.style.left = mx + 'px'; cur.style.top = my + 'px'; });

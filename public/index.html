@@ -70,18 +70,23 @@
     }
 
     .nav-logo {
-      font-family: var(--f-head);
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
+
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--white);
+      color: var(--navy);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      display: inline-flex;
     }
 
     .nav-logo img {
       height: 2.6rem;
       width: auto;
-      display: block
+      display: inline-block;
+      flex-shrink: 0
     }
 
     .nav-logo span {
@@ -253,8 +258,43 @@
       max-width: 560px;
       opacity: 0;
       animation: fadeUp 0.9s 0.7s ease forwards;
+      padding-left: 16px;
       border-left: 3px solid var(--teal);
-      padding-left: 16px
+
+      .hero-tagline-last {
+        position: relative;
+        display: inline-block;
+        padding-right: 48px;
+      }
+
+      .hero-tagline-last .htl-v {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: var(--teal);
+      }
+
+      .hero-tagline-last .htl-h {
+        position: absolute;
+        right: 0;
+        top: 35px;
+        height: 2px;
+        width: 44px;
+        background: var(--teal);
+      }
+
+      @media (max-width: 768px) {
+        .hero-tagline-last {
+          padding-right: 28px;
+        }
+
+        .hero-tagline-last .htl-h {
+          top: 24px;
+          width: 28px;
+        }
+      }
     }
 
     .hero-sub {
@@ -317,6 +357,31 @@
     .btn-hg:hover {
       border-color: var(--teal);
       color: var(--teal)
+    }
+
+    .btn-hero-program {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1rem 2.5rem;
+      background: var(--teal);
+      border: none;
+      color: var(--navy);
+      font-size: 0.74rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 2px 16px rgba(42, 191, 170, 0.12);
+      transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+      border-radius: 4px;
+    }
+
+    .btn-hero-program:hover {
+      background: var(--teal-d);
+      color: var(--white);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 6px 24px rgba(42, 191, 170, 0.18);
     }
 
     .hero-stats {
@@ -1288,7 +1353,7 @@
     }
 
     .cl-icon {
-      font-size: 1.2rem
+      font-size: 1.5rem
     }
 
     .cl-label {
@@ -1426,7 +1491,7 @@
     /* FOOTER */
     footer {
       background: #060f17;
-      padding: 50px 60px 32px;
+      padding: 30px 60px 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.05)
     }
 
@@ -1434,9 +1499,9 @@
       display: grid;
       grid-template-columns: 1.4fr 1fr 1fr 1fr;
       gap: 48px;
-      padding-bottom: 40px;
+      padding-bottom: 10px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-      margin-bottom: 28px
+      margin-bottom: 10px
     }
 
     .f-logo {
@@ -1503,8 +1568,10 @@
     .f-copy {
       font-family: var(--f-body);
       font-size: 0.72rem;
-      color: rgba(255, 255, 255, 0.15);
-      letter-spacing: 0.04em
+      color: rgba(255, 255, 255, 0.397);
+      letter-spacing: 0.04em;
+      text-align: right;
+      flex-grow: 1
     }
 
     .f-tag {
@@ -1895,9 +1962,9 @@
     <a href="#" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#routes">Three Routes</a></li>
-      <li><a href="#game">The Playbook</a></li>
-      <li><a href="#program">The Program</a></li>
+      <li><a href="routes.html">Three Routes</a></li>
+      <li><a href="playbook.html">The Playbook</a></li>
+      <li><a href="program.html">The Program</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
     <a href="#discovery" class="nav-cta">Book Discovery Call</a>
@@ -1922,7 +1989,7 @@
         <p class="hero-tagline">Pragmatic Strategy &#8212; No Theory. Just What Wins Projects.</p>
         <div class="hero-btns">
           <!-- <a href="#discovery" class="btn-hp">Book Discovery Call</a> -->
-          <a href="program.html" class="btn-hg">Explore the Program</a>
+          <a href="program.html" class="btn-hero-program">Explore the Program</a>
         </div>
       </div>
       <div class="hero-right">
@@ -2427,30 +2494,17 @@
     <div class="ft">
       <div>
         <a href="#" class="f-logo">Pragmatic<span>Step</span></a>
-        <p class="f-desc">Specification-Led Growth Partnership for Building Material Manufacturers. Pan-India. Field-tested. 20+ years of doing it &#8212; not studying it.</p>
+        <p class="f-desc">Specification-Led Growth Partnership for Building Material Manufacturers. Pan-India.
+          Field-tested. 20+ years of doing it &#8212; not studying it.</p>
       </div>
-      <div>
-        <div class="f-col-title">The Program</div>
-      </div>
-      <div>
-        <div class="f-col-title">Framework</div>
-        <ul class="f-links">
-          <li><a href="routes.html">The Three Routes</a></li>
-          <li><a href="program.html">The Growth Program</a></li>
-          <li><a href="playbook.html">The Winning Playbook</a></li>
-        </ul>
-      </div>
-      <div style="display:flex; flex-direction:column; align-items:flex-end; justify-content:flex-end;">
-        <div class="f-copy" style="margin-bottom:8px;">&#169; 2025 Pragmatic Step. All rights reserved.</div>
-        <div class="f-col-title">Connect</div>
-        <ul class="f-links">
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </div>
+
+
+
     </div>
-    <!-- <div class="fb">
-      <div class="f-tag">"No Theory. Just What Wins Projects."</div>
-    </div> -->
+    <div class="fb">
+      <div class="f-copy">&#169; 2025 Pragmatic Step. All rights reserved.</div>
+      <!-- <div class="f-tag">"No Theory. Just What Wins Projects."</div> -->
+    </div>
   </footer>
 
   <script>

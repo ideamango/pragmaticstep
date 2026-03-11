@@ -66,62 +66,74 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 56px;
+      padding: 0 60px;
+      height: 68px;
       background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+      border-bottom: 1px solid #d8e6ed;
+      transition: box-shadow 0.3s;
     }
 
     .nav-logo {
-      font-family: var(--f-head);
-      font-size: 1.15rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--navy-d);
+      color: #0d1f2d;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .nav-logo img {
+      height: 2.6rem;
+      width: auto;
+      display: inline-block;
+      flex-shrink: 0;
     }
 
     .nav-logo span {
-      color: var(--teal);
+      color: #2abfaa;
     }
 
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 36px;
       list-style: none;
     }
 
     .nav-links a {
-      font-family: var(--f-body);
+      font-family: 'Barlow', sans-serif;
       font-size: 0.78rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
+      font-weight: 500;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #334155;
+      color: #2a3d50;
       text-decoration: none;
       transition: color 0.2s;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--teal);
+      color: #2abfaa;
     }
 
     .nav-cta {
-      font-family: var(--f-body);
+      font-family: 'Barlow', sans-serif;
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--navy-d);
-      background: var(--teal);
-      padding: 10px 24px;
+      color: var(--white);
+      background: #2abfaa;
+      padding: 11px 26px;
       text-decoration: none;
       transition: background 0.2s;
+      white-space: nowrap;
     }
 
     .nav-cta:hover {
-      background: var(--teal-l);
+      background: #1f9e8c;
     }
 
     /* ── HERO ── full-width, photo overlay like Image 2 */
@@ -1064,9 +1076,9 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 960px) {
+    @media (max-width: 768px) {
       nav {
-        padding: 16px 24px;
+        padding: 0 20px;
       }
 
       .nav-links {
@@ -1265,7 +1277,7 @@
 
   <!-- NAV -->
   <nav>
-    <a href="index.html" class="nav-logo">Pragmatic<span>Step</span></a>
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="routes.html" class="active">Three Routes</a></li>

@@ -7,7 +7,7 @@
   <title>About Rajneesh Srivastava — Pragmatic Step</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <style>
     :root {
@@ -51,119 +51,74 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: .9rem 3.5rem;
-      background: rgba(255, 255, 255, .97);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(15, 23, 42, .08);
-      transition: padding .3s;
+      padding: 0 60px;
+      height: 68px;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid #d8e6ed;
+      transition: box-shadow 0.3s;
     }
 
-    .nav-brand {
-      display: flex;
+    .nav-logo {
+      display: inline-flex;
       align-items: center;
-      gap: .7rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0d1f2d;
       text-decoration: none;
     }
 
-    .nav-logo-img {
-      height: 28px;
-      width: 28px;
-      object-fit: contain;
-      mix-blend-mode: normal;
+    .nav-logo img {
+      height: 2.6rem;
+      width: auto;
+      display: inline-block;
+      flex-shrink: 0;
     }
 
-    .nav-logo-text {
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.1rem;
-      letter-spacing: .06em;
-      color: #0f172a;
-    }
-
-    .nav-logo-text span {
-      color: var(--teal);
+    .nav-logo span {
+      color: #2abfaa;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.8rem;
+      gap: 36px;
+      list-style: none;
     }
 
     .nav-links a {
-      font-size: .7rem;
-      letter-spacing: .12em;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #334155;
+      color: #2a3d50;
       text-decoration: none;
-      transition: color .3s;
+      transition: color 0.2s;
     }
 
-    .nav-links a:hover {
-      color: var(--teal);
-    }
-
+    .nav-links a:hover,
     .nav-links a.active {
-      color: var(--teal);
+      color: #2abfaa;
     }
 
-    .nav-hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-
-    .nav-hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #0f172a;
-      border-radius: 2px;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(255, 255, 255, .98);
-      z-index: 300;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .mobile-menu.open {
-      display: flex;
-    }
-
-    .mobile-menu a {
-      font-family: "Montserrat", sans-serif;
-      font-size: 2rem;
-      letter-spacing: .1em;
-      color: #0f172a;
+    .nav-cta {
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: #2abfaa;
+      color: #ffffff;
+      padding: 11px 26px;
       text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
     }
 
-    .mobile-menu a:hover {
-      color: var(--teal);
-    }
-
-    .mobile-menu a.active {
-      color: var(--teal);
-    }
-
-    .mobile-close {
-      position: absolute;
-      top: 1.4rem;
-      right: 2rem;
-      background: none;
-      border: none;
-      color: #0f172a;
-      font-size: 1.8rem;
-      cursor: pointer;
+    .nav-cta:hover {
+      background: #1f9e8c;
     }
 
     .about-hero {
@@ -1263,15 +1218,11 @@
 
     @media(max-width:768px) {
       nav {
-        padding: .8rem 1.3rem;
+        padding: 0 20px;
       }
 
       .nav-links {
         display: none;
-      }
-
-      .nav-hamburger {
-        display: flex;
       }
 
       .about-hero {
@@ -1432,10 +1383,7 @@
 <body>
 
   <nav id="mainNav">
-    <a href="index.html" class="nav-brand">
-      <img class="nav-logo-img" src="../logon_uploads/logo.png" alt="Pragmatic Step">
-      <span class="nav-logo-text">PRAGMATIC<span>STEP</span></span>
-    </a>
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="routes.html">Three Routes</a>
@@ -1443,18 +1391,8 @@
       <a href="program.html">The Program</a>
       <a href="about.html" class="active">About Us</a>
     </div>
-    <button class="nav-hamburger" onclick="openMenu()"
-      aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="index.html#discovery" class="nav-cta">Book Discovery Call</a>
   </nav>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-close" onclick="closeMenu()">&#10005;</button>
-    <a href="index.html" onclick="closeMenu()">Home</a>
-    <a href="routes.html" onclick="closeMenu()">Three Routes</a>
-    <a href="playbook.html" onclick="closeMenu()">The Playbook</a>
-    <a href="program.html" onclick="closeMenu()">The Program</a>
-    <a href="about.html" onclick="closeMenu()" class="active">About Us</a>
-  </div>
 
   <div class="about-hero">
     <div class="ah-bg"></div>
@@ -1970,11 +1908,6 @@
   </footer>
 
   <script>
-    function openMenu() { document.getElementById('mobileMenu').classList.add('open'); }
-    function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
-    window.addEventListener('scroll', function () {
-      document.getElementById('mainNav').style.padding = window.scrollY > 60 ? '0.6rem 3.5rem' : '0.9rem 3.5rem';
-    }, { passive: true });
     var obs = new IntersectionObserver(function (e) {
       e.forEach(function (i) { if (i.isIntersecting) i.target.classList.add('visible'); });
     }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });

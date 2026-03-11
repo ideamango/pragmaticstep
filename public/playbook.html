@@ -53,9 +53,9 @@
       align-items: center;
       justify-content: space-between;
       padding: .9rem 3.5rem;
-      background: rgba(13, 13, 13, .95);
+      background: rgba(255, 255, 255, .97);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(45, 212, 191, .2);
+      border-bottom: 1px solid rgba(15, 23, 42, .08);
       transition: padding .3s;
     }
 
@@ -70,14 +70,14 @@
       height: 28px;
       width: 28px;
       object-fit: contain;
-      mix-blend-mode: lighten;
+      mix-blend-mode: normal;
     }
 
     .nav-logo-text {
-      font-family: "Bebas Neue", sans-serif;
-      font-size: 1.35rem;
-      letter-spacing: .1em;
-      color: var(--white);
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: .06em;
+      color: #0f172a;
     }
 
     .nav-logo-text span {
@@ -93,7 +93,7 @@
       font-size: .7rem;
       letter-spacing: .12em;
       text-transform: uppercase;
-      color: var(--offwhite);
+      color: #334155;
       text-decoration: none;
       transition: color .3s;
     }
@@ -117,7 +117,7 @@
       display: block;
       width: 22px;
       height: 2px;
-      background: var(--white);
+      background: #0f172a;
       border-radius: 2px;
     }
 
@@ -125,7 +125,7 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(13, 13, 13, .98);
+      background: rgba(255, 255, 255, .98);
       z-index: 300;
       flex-direction: column;
       align-items: center;
@@ -138,10 +138,10 @@
     }
 
     .mobile-menu a {
-      font-family: "Bebas Neue", sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 2rem;
       letter-spacing: .1em;
-      color: var(--white);
+      color: #0f172a;
       text-decoration: none;
     }
 
@@ -156,7 +156,7 @@
       right: 2rem;
       background: none;
       border: none;
-      color: var(--white);
+      color: #0f172a;
       font-size: 1.8rem;
       cursor: pointer;
     }
@@ -1097,6 +1097,31 @@
 
 <body>
 
+  <nav id="mainNav">
+    <a href="index.html" class="nav-brand">
+      <img class="nav-logo-img" src="../logon_uploads/logo.png" alt="Pragmatic Step">
+      <span class="nav-logo-text">PRAGMATIC<span>STEP</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="routes.html">Three Routes</a>
+      <a href="playbook.html" class="active">The Playbook</a>
+      <a href="program.html">The Program</a>
+      <a href="about.html">About Us</a>
+    </div>
+    <button class="nav-hamburger" onclick="openMenu()"
+      aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="closeMenu()">&#10005;</button>
+    <a href="index.html" onclick="closeMenu()">Home</a>
+    <a href="routes.html" onclick="closeMenu()">Three Routes</a>
+    <a href="playbook.html" onclick="closeMenu()" class="active">The Playbook</a>
+    <a href="program.html" onclick="closeMenu()">The Program</a>
+    <a href="about.html" onclick="closeMenu()">About Us</a>
+  </div>
+
   <!-- ═══ HERO ════════════════════════════════════════════════════ -->
   <div class="pb-hero">
     <div class="pb-hero-bg"></div>
@@ -1432,31 +1457,5 @@
     document.querySelectorAll('.pb-phase').forEach(p => obs.observe(p));
   </script>
 </body>
-
-<nav id="mainNav">
-  <a href="index.html" class="nav-brand">
-    <img class="nav-logo-img" src="../logon_uploads/logo.png" alt="Pragmatic Step">
-    <span class="nav-logo-text">PRAGMATIC<span>STEP</span></span>
-  </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="index.html#routes">Routes</a>
-    <a href="playbook.html" class="active">Playbook</a>
-    <a href="program.html">Program</a>
-    <a href="about.html">Co-Pilot</a>
-    <a href="index.html#contact">Contact</a>
-  </div>
-  <button class="nav-hamburger" onclick="openMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="closeMenu()">&#10005;</button>
-  <a href="index.html" onclick="closeMenu()">Home</a>
-  <a href="index.html#routes" onclick="closeMenu()">Routes</a>
-  <a href="playbook.html" onclick="closeMenu()" class="active">Playbook</a>
-  <a href="program.html" onclick="closeMenu()">Program</a>
-  <a href="about.html" onclick="closeMenu()">Co-Pilot</a>
-  <a href="index.html#contact" onclick="closeMenu()">Contact</a>
-</div>
 
 </html>

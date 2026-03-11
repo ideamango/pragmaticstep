@@ -71,15 +71,11 @@
 
     .nav-logo {
       font-family: var(--f-head);
-      font-size: 1.12rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--navy);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem
+      color: var(--white);
     }
 
     .nav-logo img {
@@ -1500,7 +1496,7 @@
 
     .fb {
       display: flex;
-      align-items: center;
+      align-items: right;
       justify-content: space-between
     }
 
@@ -1871,21 +1867,24 @@
       align-items: center;
       gap: 0.8rem;
       padding: 1rem 2.5rem;
-      background: rgba(42, 191, 170, 0.08);
-      border: 1px solid rgba(42, 191, 170, 0.3);
-      color: var(--teal);
+      background: var(--teal);
+      border: none;
+      color: var(--navy);
       font-size: 0.74rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.3s ease;
+      box-shadow: 0 2px 16px rgba(42, 191, 170, 0.12);
+      transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+      border-radius: 4px;
     }
 
     .btn-ghost-teal a:hover {
-      background: var(--teal);
+      background: var(--teal-d);
       color: var(--white);
-      border-color: var(--teal);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 6px 24px rgba(42, 191, 170, 0.18);
     }
   </style>
 </head>
@@ -1913,7 +1912,10 @@
     <div class="hero-grid-lines"></div>
     <div class="hero-content">
       <div class="hero-left">
-        <div class="hero-eyebrow">Specification Growth Partner</div>
+        <div class="hero-divider"></div>
+        <p class="hero-tagline" style="color:var(--teal); font-weight: 900;font-size: 2.15rem;">Specification Growth
+          Partner</p>
+
         <h1 class="hero-h1">Building Specification&#8209;Led Growth Engines<br><span class="tl">for Building Material
             Brands.</span></h1>
         <div class="hero-divider"></div>
@@ -1943,7 +1945,7 @@
         </div>
       </div>
     </div>
-    <div class="hero-stats">
+    <!-- <div class="hero-stats">
       <div class="stat">
         <div class="stat-n">20+</div>
         <div class="stat-l">Years Field Experience</div>
@@ -1960,7 +1962,7 @@
         <div class="stat-n">Pan</div>
         <div class="stat-l">India Coverage</div>
       </div>
-    </div>
+    </div> -->
   </section>
 
   <!-- BELIEF -->
@@ -2347,20 +2349,20 @@
                 <div class="cl-value">rajneesh@pragmaticstep.com</div>
               </div>
             </a>
-            <a href="https://wa.me/919871033243" target="_blank" class="contact-link">
+            <a href="https://wa.me/919871246243" target="_blank" class="contact-link">
               <div class="cl-icon">&#128172;</div>
               <div>
                 <div class="cl-label">Phone / WhatsApp</div>
                 <div class="cl-value">+91 9871246243</div>
               </div>
             </a>
-            <a href="https://pragmaticstep.com" target="_blank" class="contact-link">
+            <!-- <a href="https://pragmaticstep.com" target="_blank" class="contact-link">
               <div class="cl-icon">&#127760;</div>
               <div>
                 <div class="cl-label">Website</div>
                 <div class="cl-value">pragmaticstep.com</div>
               </div>
-            </a>
+            </a> -->
             <div class="contact-link">
               <div class="cl-icon">&#128205;</div>
               <div>
@@ -2425,38 +2427,30 @@
     <div class="ft">
       <div>
         <a href="#" class="f-logo">Pragmatic<span>Step</span></a>
-        <p class="f-desc">Specification-Led Growth Partnership for Building Material Manufacturers. Pan-India.
-          Field-tested. 20+ years of doing it &#8212; not studying it.</p>
+        <p class="f-desc">Specification-Led Growth Partnership for Building Material Manufacturers. Pan-India. Field-tested. 20+ years of doing it &#8212; not studying it.</p>
       </div>
       <div>
         <div class="f-col-title">The Program</div>
-        <ul class="f-links">
-          <li><a href="#">Specification Blueprint</a></li>
-          <li><a href="#">Specification Bootcamp</a></li>
-          <li><a href="#">Growth Partner</a></li>
-        </ul>
       </div>
       <div>
         <div class="f-col-title">Framework</div>
         <ul class="f-links">
-          <li><a href="#routes">The Three Routes</a></li>
-          <li><a href="#project-cycle">The Project Cycle</a></li>
-          <li><a href="#playbook">The Winning Playbook</a></li>
+          <li><a href="routes.html">The Three Routes</a></li>
+          <li><a href="program.html">The Growth Program</a></li>
+          <li><a href="playbook.html">The Winning Playbook</a></li>
         </ul>
       </div>
-      <div>
+      <div style="display:flex; flex-direction:column; align-items:flex-end; justify-content:flex-end;">
+        <div class="f-copy" style="margin-bottom:8px;">&#169; 2025 Pragmatic Step. All rights reserved.</div>
         <div class="f-col-title">Connect</div>
         <ul class="f-links">
-          <li><a href="https://www.linkedin.com/company/pragmatic-step" target="_blank">LinkedIn</a></li>
-          <li><a href="contact.html">Book a Call</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </div>
     </div>
-    <div class="fb">
-      <div class="f-copy">&#169; 2025 Pragmatic Step. All rights reserved.</div>
+    <!-- <div class="fb">
       <div class="f-tag">"No Theory. Just What Wins Projects."</div>
-    </div>
+    </div> -->
   </footer>
 
   <script>

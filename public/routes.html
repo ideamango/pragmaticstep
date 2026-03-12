@@ -1270,6 +1270,67 @@
       padding-left: 28px;
       margin-bottom: 40px;
     }
+
+    /* PROGRAM FOOTER (UNIFIED ACROSS PAGES) */
+    footer {
+      background: var(--ink, #0d0d0d);
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      padding: 2rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .foot-brand {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+    }
+
+    .foot-logo {
+      height: 2rem;
+      width: 2rem;
+
+      mix-blend-mode: lighten;
+    }
+
+    .foot-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: var(--paper, #f5f0e8);
+      letter-spacing: .1em;
+    }
+
+    .foot-name span {
+      color: var(--teal);
+    }
+
+    .foot-tag {
+      font-size: .63rem;
+      color: var(--mist, #8a9aaa);
+      margin-top: .18rem;
+    }
+
+    .foot-legal {
+      font-size: .6rem;
+      color: rgba(138, 154, 170, .38);
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        gap: .8rem;
+        text-align: center;
+        padding: 1.5rem 1.2rem;
+      }
+
+      .foot-legal,
+      .foot-tag {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -1647,15 +1708,20 @@
         for your product, your team, and your market.</p>
       <div class="btn-row reveal d1">
         <a href="#" class="btn-main">Book Your Discovery Call</a>
-        <a href="#" class="btn-out">View the Full Programme</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="f-brand">Pragmatic<span>Step</span></div>
-    <div class="f-note">Specification-Led Growth Partnership &nbsp;·&nbsp; Building Material Manufacturers</div>
+    <div class="foot-brand">
+      <img class="foot-logo" src="logo.png" alt="Pragmatic Step">
+      <div>
+        <div class="foot-name">PRAGMATIC<span>STEP</span></div>
+        <div class="foot-tag">Specification Growth Partner &middot; Building Material Brands &middot; India</div>
+      </div>
+    </div>
+    <div class="foot-legal">&copy; 2026 Pragmatic Step</div>
   </footer>
 
   <script>

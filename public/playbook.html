@@ -239,7 +239,7 @@
       justify-content: flex-start;
       align-items: center;
       gap: 10px;
-      padding: 14px 0 0 0;
+      padding: 14px 56px;
       overflow-x: auto;
       scrollbar-width: none;
     }
@@ -595,10 +595,10 @@
     }
 
     .bullet-desc {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 300;
-      color: var(--muted);
-      line-height: 1.55;
+      color: var(--white);
+      line-height: 1.65;
     }
 
     /* — tactic pills — */
@@ -743,7 +743,7 @@
         justify-content: flex-start;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: 12px 32px;
+        padding: 14px 0 0 0;
         -webkit-overflow-scrolling: touch;
       }
 
@@ -865,7 +865,7 @@
         display: flex;
         /* justify-content: flex-start; */
         gap: 8px;
-        /* padding: 10px 16px; */
+        padding: 14px 0 0 0;
         overflow-x: auto;
         flex-wrap: wrap;
       }
@@ -940,6 +940,7 @@
 
       .bullet-desc {
         font-size: 13px;
+        color: var(--white);
       }
 
       /* Pills */
@@ -1018,6 +1019,67 @@
         opacity: 0;
       }
     }
+
+    /* PROGRAM FOOTER (UNIFIED ACROSS PAGES) */
+    footer {
+      background: var(--ink, #0d0d0d);
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      padding: 2rem 3.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .foot-brand {
+      display: flex;
+      align-items: flex-start;
+      gap: .65rem;
+    }
+
+    .foot-logo {
+      height: 2rem;
+      width: 2rem;
+      object-fit: contain;
+      mix-blend-mode: lighten;
+    }
+
+    .foot-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: #f5f0e8;
+      letter-spacing: .1em;
+    }
+
+    .foot-name span {
+      color: var(--teal);
+    }
+
+    .foot-tag {
+      font-size: .63rem;
+      color: #8a9aaa;
+      margin-top: .18rem;
+    }
+
+    .foot-legal {
+      font-size: .6rem;
+      color: rgba(138, 154, 170, .38);
+      text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        gap: .8rem;
+        text-align: center;
+        padding: 1.5rem 1.2rem;
+      }
+
+      .foot-legal,
+      .foot-tag {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -1085,7 +1147,8 @@
             <div class="bullet-icon">📋</div>
             <div class="bullet-text">
               <div class="bullet-title">Project Viability Scoring</div>
-              <div class="bullet-desc">Budget confirmed, spec window open, programme live — if all three aren't green,
+              <div class="bullet-desc">Budget confirmed, spec window open, programme live — if
+                all three aren't green,
                 reconsider before committing resource.</div>
             </div>
           </div>
@@ -1333,24 +1396,16 @@
 
   </div><!-- /.pb-phases -->
 
-  <!-- ═══ FOOTER BAND ════════════════════════════════════════════ -->
-  <div class="pb-footer">
-    <div class="pb-footer-bg"></div>
-    <div class="pb-footer-content">
+  <footer>
+    <div class="foot-brand">
+      <img class="foot-logo" src="logo.png" alt="Pragmatic Step">
       <div>
-        <div class="pb-footer-hl">Five Phases. One Direction.<br><span>From First Conversation to Preferred
-            Brand.</span></div>
-        <p class="pb-footer-sub">Each phase reinforces the last. Strength at specification protects conversion. Strength
-          at conversion funds delivery. Strength at delivery compounds reputation.</p>
+        <div class="foot-name">PRAGMATIC<span>STEP</span></div>
+        <div class="foot-tag">Specification Growth Partner &middot; Building Material Brands &middot; India</div>
       </div>
-      <a href="program.html" class="pb-footer-cta">
-        See the Programme
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-      </a>
     </div>
-  </div>
+    <div class="foot-legal">&copy; 2026 Pragmatic Step</div>
+  </footer>
 
   <script>
     const obs = new IntersectionObserver(entries => {

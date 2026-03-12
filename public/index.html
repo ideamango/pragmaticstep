@@ -58,70 +58,68 @@
       left: 0;
       right: 0;
       z-index: 200;
-      background: rgba(255, 255, 255, 0.97);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--line);
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0 60px;
       height: 68px;
-      transition: box-shadow 0.3s
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid #d8e6ed;
+      transition: box-shadow 0.3s;
     }
 
     .nav-logo {
-
+      display: inline-flex;
+      align-items: center;
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.4rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--navy);
+      color: #0d1f2d;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      display: inline-flex;
     }
 
     .nav-logo img {
       height: 2.6rem;
       width: auto;
       display: inline-block;
-      flex-shrink: 0
+      flex-shrink: 0;
     }
 
     .nav-logo span {
-      color: var(--teal)
+      color: #2abfaa;
     }
 
     .nav-links {
       display: flex;
       gap: 36px;
-      list-style: none
+      list-style: none;
     }
 
     .nav-links a {
-      font-family: var(--f-body);
+      font-family: 'Barlow', sans-serif;
       font-size: 0.78rem;
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--body);
+      color: #2a3d50;
       text-decoration: none;
-      transition: color 0.2s
+      transition: color 0.2s;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
-      color: var(--teal)
+      color: #2abfaa;
     }
 
     .nav-cta {
-      font-family: var(--f-body);
+      font-family: 'Barlow', sans-serif;
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      background: var(--teal);
+      background: #2abfaa;
       color: var(--white);
       padding: 11px 26px;
       text-decoration: none;
@@ -130,7 +128,7 @@
     }
 
     .nav-cta:hover {
-      background: var(--teal-d)
+      background: #1f9e8c;
     }
 
     /* HERO */
@@ -1488,8 +1486,8 @@
       color: rgba(255, 255, 255, 0.72)
     }
 
-    /* FOOTER */
-    footer {
+    /* LEGACY FOOTER (disabled: replaced by unified footer block below) */
+    .legacy-footer {
       background: #060f17;
       padding: 30px 60px 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.05)
@@ -1956,7 +1954,7 @@
 
     /* PROGRAM FOOTER (UNIFIED ACROSS PAGES) */
     footer {
-      background: var(--ink, #0d0d0d);
+      background: #0d0d0d;
       border-top: 1px solid rgba(255, 255, 255, .06);
       padding: 2rem 3.5rem;
       display: flex;
@@ -1981,7 +1979,7 @@
     .foot-name {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.1rem;
-      color: var(--paper, #f5f0e8);
+      color: #f5f0e8;
       letter-spacing: .1em;
     }
 
@@ -1991,7 +1989,7 @@
 
     .foot-tag {
       font-size: .63rem;
-      color: var(--mist, #8a9aaa);
+      color: #8a9aaa;
       margin-top: .18rem;
     }
 
@@ -2019,15 +2017,15 @@
 
 <body>
 
-  <nav id="nav">
-    <a href="#" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="routes.html">Three Routes</a></li>
-      <li><a href="playbook.html">The Playbook</a></li>
-      <li><a href="program.html">The Program</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
+  <nav id="mainNav">
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="routes.html">Three Routes</a>
+      <a href="playbook.html">The Playbook</a>
+      <a href="program.html">The Program</a>
+      <a href="about.html">About Us</a>
+    </div>
     <a href="#discovery" class="nav-cta">Book Discovery Call</a>
   </nav>
 
@@ -2574,7 +2572,7 @@
       sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
       navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
     }, { passive: true });
-    const nav = document.getElementById('nav');
+    const nav = document.getElementById('mainNav');
     window.addEventListener('scroll', () => {
       nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
     }, { passive: true });

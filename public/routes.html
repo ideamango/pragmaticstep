@@ -1273,7 +1273,7 @@
 
     /* PROGRAM FOOTER (UNIFIED ACROSS PAGES) */
     footer {
-      background: var(--ink, #0d0d0d);
+      background: #0d0d0d;
       border-top: 1px solid rgba(255, 255, 255, .06);
       padding: 2rem 3.5rem;
       display: flex;
@@ -1291,14 +1291,14 @@
     .foot-logo {
       height: 2rem;
       width: 2rem;
-
+      object-fit: contain;
       mix-blend-mode: lighten;
     }
 
     .foot-name {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 1.1rem;
-      color: var(--paper, #f5f0e8);
+      color: #f5f0e8;
       letter-spacing: .1em;
     }
 
@@ -1308,7 +1308,7 @@
 
     .foot-tag {
       font-size: .63rem;
-      color: var(--mist, #8a9aaa);
+      color: #8a9aaa;
       margin-top: .18rem;
     }
 
@@ -1339,13 +1339,13 @@
   <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="routes.html" class="active">Three Routes</a></li>
-      <li><a href="playbook.html">The Playbook</a></li>
-      <li><a href="program.html">The Program</a></li>
-      <li><a href="about.html">About Us</a></li>
-    </ul>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="routes.html" class="active">Three Routes</a>
+      <a href="playbook.html">The Playbook</a>
+      <a href="program.html">The Program</a>
+      <a href="about.html">About Us</a>
+    </div>
     <a href="index.html#discovery" class="nav-cta">Book Discovery Call</a>
   </nav>
 

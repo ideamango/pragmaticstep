@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&display=swap"
     rel="stylesheet">
   <style>
     :root {
@@ -2013,21 +2013,12 @@
       }
     }
   </style>
+  <link rel="stylesheet" href="common-header-footer.css">
 </head>
 
 <body>
 
-  <nav id="mainNav">
-    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="routes.html">Three Routes</a>
-      <a href="playbook.html">The Playbook</a>
-      <a href="program.html">The Program</a>
-      <a href="about.html">About Us</a>
-    </div>
-    <a href="#discovery" class="nav-cta">Book Discovery Call</a>
-  </nav>
+  <div id="site-header"></div>
 
   <!-- HERO -->
   <section class="hero">
@@ -2548,17 +2539,8 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="foot-brand">
-      <img class="foot-logo" src="logo.png" alt="Pragmatic Step">
-      <div>
-        <div class="foot-name">PRAGMATIC<span>STEP</span></div>
-        <div class="foot-tag">Specification Growth Partner &middot; Building Material Brands &middot; India</div>
-      </div>
-    </div>
-    <div class="foot-legal">&copy; 2026 Pragmatic Step</div>
-  </footer>
+  <div id="site-footer"></div>
+  <script src="common-layout.js"></script>
 
   <script>
     const obs = new IntersectionObserver(entries => {

@@ -2493,20 +2493,25 @@
           <div class="inquiry-form">
             <div class="form-title">Send an Enquiry</div>
             <div class="form-sub">We respond within 24 hours. Every enquiry handled personally.</div>
-            <div id="inquiryForm">
+            <form id="inquiryForm"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSeUNwunN6pgCvtrs-HgI88yQzzIaFAUoknR7GC1RlfogWll2g/formResponse"
+              method="POST" target="hidden_iframe" onsubmit="return submitForm(event)">
               <div class="form-row">
-                <div class="form-group"><label>Name *</label><input type="text" id="fname" placeholder="Full name">
+                <div class="form-group"><label>Name *</label><input type="text" id="fname" name="entry.1300093491"
+                    placeholder="Full name" required>
                 </div>
-                <div class="form-group"><label>Company *</label><input type="text" id="fcompany" placeholder="Company">
+                <div class="form-group"><label>Company *</label><input type="text" id="fcompany" name="entry.1986900907"
+                    placeholder="Company" required>
                 </div>
               </div>
               <div class="form-row">
-                <div class="form-group"><label>Email *</label><input type="email" id="femail" placeholder="Your email">
+                <div class="form-group"><label>Email *</label><input type="email" id="femail" name="entry.1855851206"
+                    placeholder="Your email" required>
                 </div>
-                <div class="form-group"><label>WhatsApp *</label><input type="tel" id="fphone"
-                    placeholder="+91 98710 33243"></div>
+                <div class="form-group"><label>WhatsApp *</label><input type="tel" id="fphone" name="entry.2033061402"
+                    placeholder="+91 98710 33243" required></div>
               </div>
-              <div class="form-group"><label>Product Category</label><select id="fcategory">
+              <div class="form-group"><label>Product Category</label><select id="fcategory" name="entry.188969028">
                   <option value="">Select category</option>
                   <option>Ceilings &amp; Partitions</option>
                   <option>Flooring</option>
@@ -2517,7 +2522,7 @@
                   <option>Structural Steel</option>
                   <option>Other Building Materials</option>
                 </select></div>
-              <div class="form-group"><label>Starting Point</label><select id="fstart">
+              <div class="form-group"><label>Starting Point</label><select id="fstart" name="entry.92555646">
                   <option value="">Where to start?</option>
                   <option>Discovery Call</option>
                   <option>Specification Blueprint Workshop</option>
@@ -2525,10 +2530,12 @@
                   <option>Growth Partner</option>
                   <option>Not sure yet</option>
                 </select></div>
-              <div class="form-group"><label>Message</label><textarea id="fmessage"
+              <div class="form-group"><label>Message</label><textarea id="fmessage" name="entry.48602037"
                   placeholder="Your current specification challenges..."></textarea></div>
-              <button class="submit-btn" onclick="submitForm()">Send Enquiry &#8594; Book Discovery Call</button>
-            </div>
+              <button class="submit-btn" type="submit">Send Enquiry &#8594; Book Discovery Call</button>
+            </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" title="Google Form submission"
+              style="display:none;"></iframe>
             <div class="form-success" id="formSuccess">
               <h3>Enquiry Received</h3>
               <p>Rajneesh will respond personally within 24 hours.</p>
@@ -2559,43 +2566,30 @@
       nav.style.boxShadow = window.scrollY > 10 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
     }, { passive: true });
 
-    function submitForm() {
+    function submitForm(event) {
+      const form = event.target;
       const n = document.getElementById('fname').value.trim();
       const e = document.getElementById('femail').value.trim();
       const p = document.getElementById('fphone').value.trim();
       const c = document.getElementById('fcompany').value.trim();
-      const m = document.getElementById('fmessage').value.trim();
-      const cat = document.getElementById('fcategory').value;
-      const st = document.getElementById('fstart').value;
 
       if (!n || !e || !p || !c) {
+        event.preventDefault();
         alert('Please fill in all required fields.');
-        return;
+        return false;
       }
 
-      window.location.href = 'mailto:rajneesh@pragmaticstep.com?subject=' +
-        encodeURIComponent('Pragmatic Step Enquiry - ' + n + ' | ' + c) +
-        '&body=' + encodeURIComponent(
-          'Name: ' + n + '\n' +
-          'Company: ' + c + '\n' +
-          'Email: ' + e + '\n' +
-          'Phone: ' + p + '\n' +
-          'Category: ' + (cat || 'N/A') + '\n' +
-          'Start: ' + (st || 'N/A') + '\n\n' +
-          m
-        );
+      document.getElementById('fname').value = n;
+      document.getElementById('femail').value = e;
+      document.getElementById('fphone').value = p;
+      document.getElementById('fcompany').value = c;
 
       setTimeout(() => {
-        window.open(
-          'https://wa.me/919871033243?text=' + encodeURIComponent(
-            'Hi Rajneesh,\nNew inquiry from *' + n + '* (' + c + ')\nEmail: ' + e + '\nPhone: ' + p
-          ),
-          '_blank'
-        );
-      }, 800);
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }, 250);
 
-      document.getElementById('inquiryForm').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+      return true;
     }
 
 

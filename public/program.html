@@ -7,7 +7,7 @@
   <title>The Program — Pragmatic Step</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
   <style>
     :root {
@@ -150,7 +150,7 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(rgba(4, 11, 18, .28), rgba(4, 11, 18, .55)),
+        linear-gradient(90deg, rgba(4, 11, 18, .95) 0%, rgba(4, 11, 18, .80) 25%, rgba(4, 11, 18, .50) 40%, transparent 100%),
         url("/assets/program_hero_bg.png");
       background-size: cover;
       background-position: center 30%;
@@ -1250,117 +1250,87 @@
       font-size: .72rem;
     }
 
-    /* ── CTA ── */
-    .prog-cta {
-      background: linear-gradient(135deg, #071220 0%, #0d1f35 50%, #071220 100%);
-      padding: 8rem 3.5rem;
+    /* ── CTA (matched to Routes page) ── */
+    .cta-section {
+      background: #14243a;
+      padding: 100px 56px;
       text-align: center;
-      border-top: 1px solid var(--border);
       position: relative;
       overflow: hidden;
+      border-top: 1px solid var(--border);
     }
 
-    .cta-glow {
+    .cta-section::before {
+      content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 700px;
-      height: 350px;
-      background: radial-gradient(ellipse, rgba(42, 191, 170, .09) 0%, transparent 68%);
-      pointer-events: none;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(43, 191, 170, 0.07), transparent 65%);
     }
 
     .cta-inner {
       position: relative;
+      max-width: 680px;
+      margin: 0 auto;
       z-index: 1;
     }
 
-    .cta-tag {
-      font-size: .64rem;
-      letter-spacing: .26em;
+    .cta-eyebrow {
+      font-family: "Barlow", sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--teal);
-      display: block;
-      margin-bottom: 1rem;
+      margin-bottom: 18px;
     }
 
     .cta-title {
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(2.2rem, 4.5vw, 4.2rem);
-      font-weight: 300;
+      font-family: "Barlow Condensed", "Barlow", sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
       color: var(--paper);
-      line-height: 1.08;
-      margin-bottom: 1rem;
+      line-height: 1;
+      margin-bottom: 24px;
     }
 
-    .cta-title em {
-      font-style: italic;
+    .cta-title .t {
       color: var(--teal);
     }
 
     .cta-sub {
-      font-size: .9rem;
+      font-family: "Barlow", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
       color: var(--mist);
-      max-width: 480px;
-      margin: 0 auto 2.8rem;
       line-height: 1.75;
+      margin-bottom: 40px;
     }
 
-    .cta-btns {
+    .btn-row {
       display: flex;
-      gap: 1rem;
+      gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
     }
 
-    .btn-p {
-      padding: 1rem 2.5rem;
-      background: var(--teal);
-      color: #fff;
-      font-size: .76rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
+    .btn-main {
+      font-family: "Barlow", sans-serif;
+      font-size: 0.75rem;
       font-weight: 600;
-      text-decoration: none;
-      border: 2px solid var(--teal);
-      transition: all .3s;
-    }
-
-    .btn-p:hover {
-      background: transparent;
-      color: var(--teal);
-    }
-
-    .btn-g {
-      padding: 1rem 2.5rem;
-      background: transparent;
-      color: var(--paper);
-      font-size: .76rem;
-      letter-spacing: .12em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      text-decoration: none;
-      border: 2px solid var(--teal);
-      transition: all .3s;
-    }
-
-    .btn-g:hover {
-      padding: 1rem 2.5rem;
       background: var(--teal);
-      color: #fff;
-      font-size: .76rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-weight: 600;
+      color: #0f2235;
+      border: none;
+      padding: 14px 32px;
+      cursor: pointer;
       text-decoration: none;
-      border: 2px solid var(--teal);
-      transition: all .3s;
+      transition: background 0.2s;
     }
 
-    .cta-contact {
-      margin-top: 2.2rem;
-      font-size: .7rem;
-      color: rgba(138, 154, 170, .45);
+    .btn-main:hover {
+      background: #3dd4be;
     }
 
     /* ── FOOTER ── */
@@ -1490,7 +1460,7 @@
       .phil-band,
       .custom-sect,
       .comp-sect,
-      .prog-cta {
+      .cta-section {
         padding-left: 2rem;
         padding-right: 2rem;
       }
@@ -1805,8 +1775,8 @@
       }
 
       /* CTA */
-      .prog-cta {
-        padding: 5rem 1.2rem;
+      .cta-section {
+        padding: 72px 24px;
       }
 
       .cta-title {
@@ -1818,14 +1788,11 @@
         max-width: 100%;
       }
 
-      .cta-btns {
-        flex-direction: column;
-        align-items: stretch;
-        gap: .75rem;
+      .btn-row {
+        justify-content: center;
       }
 
-      .btn-p,
-      .btn-g {
+      .btn-main {
         text-align: center;
         padding: .9rem 1.5rem;
         font-size: .72rem;
@@ -2519,23 +2486,18 @@
   </div>
 
   <!-- ═══════════════ CTA ═══════════════ -->
-  <div class="prog-cta" id="cta">
-    <div class="cta-glow"></div>
-    <div class="cta-inner reveal">
-      <span class="cta-tag">The First Step Costs Nothing</span>
-      <h2 class="cta-title">Start with a<br><em>Discovery Call</em></h2>
-      <p class="cta-sub">One hour. No pitch. No obligation. A structured conversation about where your specification
-        capability stands today &#8212; and what it could systematically become.</p>
-      <div class="cta-btns">
-        <a href="/cdn-cgi/l/email-protection#631102090d0606100b23131102040e02170a00101706134d000c0e5c101601090600175e270a10000c1506111a4320020f0f433106121606101745010c071a5e2b0a433102090d0606100b4f432a43140c160f07430f0a080643170c4310000b0607160f06430243270a10000c1506111a4320020f0f4d"
-          class="btn-g">Book Discovery Call</a>
-
+  <section class="cta-section" id="cta">
+    <div class="cta-inner">
+      <div class="cta-eyebrow reveal">The Next Step</div>
+      <h2 class="cta-title reveal">Start With a<br><span class="t">Discovery Call</span></h2>
+      <p class="cta-sub reveal">One hour. No pitch. No deck. A structured conversation about where your operation
+        currently sits across all three routes &#8212; and what a systematic specification growth programme would look
+        like for your product, your team, and your market.</p>
+      <div class="btn-row reveal d1">
+        <a href="index.html#discovery" class="btn-main">Book Your Discovery Call</a>
       </div>
-      <!-- <p class="cta-contact"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-          data-cfemail="85f7e4efebe0e0f6edc5f5f7e4e2e8e4f1ece6f6f1e0f5abe6eae8">rajneesh@pragmaticstep.com</a>
-        &nbsp;&middot;&nbsp; +91 98710 33243 &nbsp;&middot;&nbsp; Greater Noida, NCR &nbsp;&middot;&nbsp; Pan India</p> -->
     </div>
-  </div>
+  </section>
 
   <div id="site-footer"></div>
 

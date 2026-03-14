@@ -474,6 +474,7 @@
     .disc-aside {
       position: sticky;
       top: 100px;
+      color: #f7fafc;
     }
 
     .disc-badge {
@@ -486,6 +487,22 @@
       text-transform: uppercase;
       color: var(--teal);
       margin-bottom: 1.6rem;
+    }
+
+    .disc-aside h2,
+    .disc-aside .sec-title {
+      color: #fff !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    }
+
+    .disc-aside p {
+      color: #eaf2fa !important;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .disc-meta-box,
+    .disc-meta-box * {
+      color: #f7fafc !important;
     }
 
     .disc-meta-box {
@@ -624,7 +641,50 @@
       gap: 5rem;
       align-items: end;
       margin-bottom: 4rem;
+      /* No global color override, preserve original intent */
     }
+
+    .bp-top h2,
+    .bp-top .sec-title {
+      color: #fff !important;
+      filter: brightness(1.15) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.13));
+    }
+
+    .bp-top p,
+    .bp-top .sec-sub {
+      color: #fafdff !important;
+      filter: brightness(1.12);
+    }
+
+    .bp-stats .bps-val {
+      color: #ffe066 !important;
+      /* vivid gold */
+      filter: brightness(1.12);
+    }
+
+    .bp-stats .bps-lbl {
+      color: #b8eaff !important;
+      /* lighter blue/teal accent */
+      filter: brightness(1.18);
+    }
+
+    .bp-deliverables .bpd-lbl {
+      color: #2afad2 !important;
+      /* brighter teal */
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      filter: brightness(1.12);
+    }
+
+    .bp-deliverables .bpd-dot {
+      background: #2afad2 !important;
+    }
+
+    .bp-deliverables .bpd-item {
+      color: #fafdff !important;
+      filter: brightness(1.10);
+    }
+
 
     .bp-stats {
       display: flex;
@@ -733,24 +793,27 @@
     .bpm-num {
       font-family: "Bebas Neue", sans-serif;
       font-size: 2.9rem;
-      color: rgba(42, 191, 170, .11);
+      color: #2afad2;
       line-height: 1;
       margin-bottom: .45rem;
+      filter: brightness(1.12);
     }
 
     .bpm-title {
       font-family: "Cormorant Garamond", serif;
       font-size: 1.12rem;
-      color: var(--paper);
+      color: #fff;
       font-weight: 600;
       margin-bottom: .55rem;
       line-height: 1.28;
+      filter: brightness(1.12);
     }
 
     .bpm-body {
       font-size: .77rem;
-      color: var(--mist);
+      color: #fafdff;
       line-height: 1.7;
+      filter: brightness(1.10);
     }
 
     .bpm-tag {
@@ -758,7 +821,9 @@
       font-size: .58rem;
       letter-spacing: .12em;
       text-transform: uppercase;
-      color: rgba(42, 191, 170, .55);
+      color: #2afad2;
+      font-weight: 600;
+      filter: brightness(1.12);
     }
 
     /* ── 03 BOOTCAMP ── */
@@ -803,6 +868,7 @@
       font-family: "Cormorant Garamond", serif;
       font-size: 1.25rem;
       color: var(--paper);
+      filter: brightness(1.08);
       font-weight: 600;
       margin-bottom: 1.1rem;
     }
@@ -813,16 +879,9 @@
       align-items: flex-start;
       font-size: .79rem;
       color: var(--mist);
+      filter: brightness(1.10);
       line-height: 1.62;
       padding: .38rem 0;
-    }
-
-    .bc-out-item::before {
-      content: "→";
-      color: var(--teal);
-      flex-shrink: 0;
-      font-size: .8rem;
-      margin-top: .05rem;
     }
 
     .bc-schedule {
@@ -1043,7 +1102,6 @@
       font-size: .63rem;
       color: var(--mist);
       margin-top: .65rem;
-      letter-spacing: .07em;
     }
 
     /* ── CUSTOMISATION ── */
@@ -1070,7 +1128,8 @@
       text-transform: uppercase;
       color: var(--teal);
       display: block;
-      margin-bottom: .7rem;
+      color: #2afad2;
+      filter: brightness(1.12);
     }
 
     .custom-hdr h2 {
@@ -1379,7 +1438,6 @@
       text-align: right;
     }
 
-    /* ── SECTION BG REVEAL ── */
     #discovery::before,
     #blueprint::before,
     #bootcamp::before,
@@ -1525,7 +1583,6 @@
         min-height: 36px;
       }
 
-      /* Disable parallax on mobile - handled in JS */
       .p-hero-bg {
         transform: none !important;
       }
@@ -1609,7 +1666,8 @@
       }
 
       .di-title {
-        font-size: 1.05rem;
+        color: #2afad2;
+        filter: brightness(1.12);
       }
 
       .di-body {

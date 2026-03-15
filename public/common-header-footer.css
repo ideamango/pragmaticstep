@@ -118,14 +118,14 @@ body>footer {
 }
 
 .foot-tag {
-    font-size: 0.63rem !important;
-    color: #8a9aaa !important;
+    font-size: 0.73rem !important;
+    color: rgba(253, 252, 252, 0.767) !important;
     margin-top: 0.18rem !important;
 }
 
 .foot-legal {
-    font-size: 0.6rem !important;
-    color: rgba(198, 199, 199, 0.38) !important;
+    font-size: 0.7rem !important;
+    color: rgba(230, 230, 230, 0.38) !important;
     text-align: right !important;
 }
 

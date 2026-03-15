@@ -21,7 +21,7 @@
 
         return '' +
             '<nav id="mainNav">' +
-            '<a href="index.html" class="nav-logo"><img src="logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>' +
+            '<a href="index.html" class="nav-logo"><img src="assets/logo.png" alt="Pragmatic Step logo">Pragmatic<span>Step</span></a>' +
             '<div class="nav-links">' + navLinks + '</div>' +
             '<a href="index.html#discovery" class="nav-cta">Book Discovery Call</a>' +
             '</nav>';
@@ -31,7 +31,7 @@
         return '' +
             '<footer>' +
             '<div class="foot-brand">' +
-            '<img class="foot-logo" src="logo.png" alt="Pragmatic Step">' +
+            '<img class="foot-logo" src="assets/logo.png" alt="Pragmatic Step">' +
             '<div>' +
             '<div class="foot-name">PRAGMATIC<span>STEP</span></div>' +
             '<div class="foot-tag">Specification Growth Partner &middot; Building Material Brands &middot; India</div>' +

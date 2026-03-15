@@ -154,11 +154,15 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, rgba(4, 11, 18, .95) 0%, rgba(4, 11, 18, .80) 25%, rgba(4, 11, 18, .50) 40%, transparent 100%),
-        url("/assets/program_hero_bg.png");
+        linear-gradient(90deg, rgba(4, 11, 18, .95) 0%, rgba(4, 11, 18, .80) 25%, rgba(4, 11, 18, .50) 40%, transparent 100%);
       background-size: cover;
       background-position: center 30%;
       background-repeat: no-repeat;
+      transition: background-image 0.3s ease-in;
+    }
+
+    .p-hero-bg.bg-loaded {
+      background-image: url("/assets/program_hero_bg.png") !important;
     }
 
     .p-hero-bg::after {
@@ -1914,7 +1918,7 @@
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <div class="p-hero">
-    <div class="p-hero-bg"></div>
+    <div class="p-hero-bg" data-bg-src="/assets/program_hero_bg.png"></div>
     <div class="p-hero-grid"></div>
     <div class="p-hero-glow"></div>
     <div class="p-hero-inner">
@@ -2619,6 +2623,7 @@
       });
     });
   </script>
+  <script src="performance.js" defer></script>
 </body>
 
 </html>

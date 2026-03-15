@@ -155,8 +155,15 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, rgba(4, 11, 18, .95) 0%, rgba(4, 11, 18, .80) 20%, rgba(4, 11, 18, .50) 30%, transparent 100%),
-        url("/assets/routes_hero_bg.png") center/cover no-repeat;
+        linear-gradient(90deg, rgba(4, 11, 18, .95) 0%, rgba(4, 11, 18, .80) 20%, rgba(4, 11, 18, .50) 30%, transparent 100%);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 0.3s ease-in;
+    }
+
+    .hero-photo.bg-loaded {
+      background-image: url("/assets/routes_hero_bg.png") !important;
     }
 
     .hero-content {
@@ -1345,7 +1352,7 @@
 
   <!-- ═══════════════════════════════════ HERO ═══════════════════════════════ -->
   <section class="hero">
-    <div class="hero-photo"></div>
+    <div class="hero-photo" data-bg-src="/assets/routes_hero_bg.png"></div>
     <div class="hero-content">
       <div class="hero-eyebrow">Pragmatic Step · Three Routes</div>
       <h1 class="hero-h1">Three Routes Into<br><span class="teal">Every Project</span></h1>
@@ -1734,6 +1741,7 @@
       document.querySelectorAll('.ri-item').forEach((r, i) => r.classList.toggle('active', i === active));
     }, { passive: true });
   </script>
+  <script src="performance.js" defer></script>
 </body>
 
 </html>

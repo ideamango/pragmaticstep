@@ -95,8 +95,15 @@ body>footer {
 
 .foot-brand {
     display: flex !important;
+    flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 0.65rem !important;
+    gap: 0.15rem !important;
+}
+
+.brand-name {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.15rem !important;
 }
 
 .foot-logo {
@@ -121,6 +128,7 @@ body>footer {
     font-size: 0.73rem !important;
     color: rgba(253, 252, 252, 0.767) !important;
     margin-top: 0.18rem !important;
+    text-align: left !important;
 }
 
 .foot-legal {
@@ -150,6 +158,18 @@ body>footer {
         gap: 0.8rem !important;
         text-align: center !important;
         padding: 1.5rem 1.2rem !important;
+    }
+
+    .foot-brand {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .brand-name {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     .foot-legal,

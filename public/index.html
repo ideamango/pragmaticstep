@@ -1696,6 +1696,10 @@
         padding: 72px 24px
       }
 
+      .hero-content {
+        padding-top: 24px;
+      }
+
       .hero-stats {
         grid-template-columns: repeat(2, 1fr)
       }
@@ -1731,7 +1735,58 @@
       }
 
       .cycle-track {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        gap: 22px;
+        margin-top: 34px;
+        position: relative;
+      }
+
+      .cycle-track::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 18px;
+        bottom: 18px;
+        left: 25px;
+        width: 1px;
+        right: auto;
+        height: auto;
+        background: linear-gradient(180deg, var(--teal), rgba(42, 191, 170, 0.25), rgba(42, 191, 170, 0.08));
+      }
+
+      .cycle .sec-head {
+        text-align: center;
+      }
+
+      .cycle .sec-sub {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .ct {
+        position: relative;
+        padding: 0 0 8px 74px;
+        background: none;
+        border: none;
+      }
+
+      .ct-num {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+      }
+
+      .ct-tag,
+      .ct-title,
+      .ct-lbl {
+        display: block;
+        text-align: left;
+      }
+
+      .ct-pts {
+        max-width: none;
+        margin: 0;
       }
 
       .form-row {
@@ -2034,7 +2089,7 @@
     <div class="hero-content">
       <div class="hero-left">
 
-        <p class="hero-tagline" style="color:var(--teal); font-weight: 900;font-size: 2.15rem;">Specification Growth
+        <p class="hero-tagline" style="color:var(--teal); ">Specification Growth
           Partner</p>
 
         <h1 class="hero-h1">Building Specification&#8209;Led Growth Engines<br><span class="tl">for Building Material

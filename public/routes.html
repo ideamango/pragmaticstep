@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Three Routes Into Every Project — Pragmatic Step</title>
-  <link rel="icon" type="image/png" href="assets/logo.png" sizes="any">
-  <link rel="icon" type="image/png" href="assets/logo.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="assets/logo.png">
+  <title>Routes | Pragmatic Step</title>
+  <link rel="icon" type="image/png" href="assets/logo_favicon.png" sizes="any">
+  <link rel="icon" type="image/png" href="assets/logo_favicon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/logo_favicon.png">
   <meta name="theme-color" content="#2abfaa">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1100,6 +1100,27 @@
 
       .hero {
         padding: 100px 24px 56px;
+        text-align: center;
+      }
+
+      .hero-photo {
+        background: none !important;
+      }
+
+      .hero-photo.bg-loaded {
+        background-image: url("/assets/routes_hero_bg.png") !important;
+        background-color: transparent;
+      }
+
+      .hero-sub {
+        color: var(--navy-d);
+        font-weight: 600;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .pill {
+        font-weight: 700;
       }
 
       .philosophy {
@@ -1358,9 +1379,10 @@
     <div class="hero-content">
       <div class="hero-eyebrow">Pragmatic Step · Three Routes</div>
       <h1 class="hero-h1">Three Routes Into<br><span class="teal">Every Project</span></h1>
-      <p class="hero-sub">A mature project sales operation competes intelligently across all three routes — not just the
+      <!-- <p class="hero-sub">A mature project sales operation competes intelligently across all three routes — not just the
         first. The framework below defines what each route means, what it demands, and how Pragmatic Step builds
-        capability across all three simultaneously.</p>
+        capability across all three simultaneously.</p> -->
+      <br>
       <div class="route-pills">
         <div class="pill active" onclick="goTo('route-a', 0)">01 &nbsp; Route A — Primary Specification</div>
         <div class="pill" onclick="goTo('route-b', 1)">02 &nbsp; Route B — List of Make</div>

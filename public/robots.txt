@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pragmaticstep.com/sitemap.xml

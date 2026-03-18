@@ -424,13 +424,7 @@
     }
 
     .ri-item.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--teal);
+      content: none;
     }
 
     .ri-tag {
@@ -1488,7 +1482,7 @@
 
   <!-- ═══════════════════════════ ROUTE OVERVIEW STRIP ══════════════════════ -->
   <div class="route-intro" id="route-strip">
-    <div class="ri-item active" onclick="goTo('route-a', 0)">
+    <div class="ri-item" onclick="goTo('route-a', 0)">
       <div class="ri-tag">Route A</div>
       <div class="ri-title">Primary<br>Specification</div>
       <div class="ri-desc">Your product named by architectural authority. Every conversation starts with a written

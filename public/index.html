@@ -571,22 +571,23 @@
       display: block
     }
 
-    .pl-title {
+    .sec-title {
       font-family: var(--f-head);
-      font-size: 1.3rem;
-      font-weight: 700;
+      /* Increased size (doubled) for prominent headings during local review */
+      font-size: clamp(5.6rem, 11vw, 9.6rem);
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       color: var(--white);
-      margin-bottom: 10px
+      line-height: 1.02;
+      margin-bottom: 12px
     }
 
-    .pl-body {
-      font-family: var(--f-body);
-      font-size: 0.95rem;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.72);
-      line-height: 1.72
+    font-family: var(--f-body);
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.72
     }
 
     /* SECTION HEADER */
@@ -596,7 +597,7 @@
 
     .sec-eyebrow {
       font-family: var(--f-body);
-      font-size: 0.66rem;
+      font-size: 1.2rem;
       font-weight: 500;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -606,12 +607,13 @@
 
     .sec-title {
       font-family: var(--f-head);
-      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      /* Medium-large prominent heading */
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.02em;
       color: var(--white);
-      line-height: 1.05;
+      line-height: 1.02;
       margin-bottom: 12px
     }
 
@@ -625,7 +627,7 @@
 
     .sec-sub {
       font-family: var(--f-body);
-      font-size: 0.95rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: rgba(255, 255, 255, 0.75);
       line-height: 1.75;
@@ -2122,8 +2124,7 @@
     <div class="hero-content">
       <div class="hero-left">
 
-        <p class="hero-tagline" style="color:var(--teal); ">Project Growth
-          Partner</p>
+        <p class="hero-tagline" style="color:var(--teal); ">Fix. Build. Scale.</p>
 
         <h1 class="hero-h1">Building Specification-Led Project Growth Systems<br><span class="tl">for Building Material
             Companies.</span></h1>
@@ -2139,7 +2140,7 @@
           <div class="hsp-item top">
             <div class="hsp-label">With Structured System</div>
             <div class="hsp-pct">72%</div>
-            <div class="hsp-desc">Specification Conversion Rate</div>
+            <div class="hsp-desc">Conversion Rate</div>
           </div>
           <div class="hsp-item top">
             <div class="hsp-label">Without Structured System</div>

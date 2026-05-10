@@ -46,7 +46,7 @@
             '<img class="foot-logo" src="assets/logo.png" alt="Pragmatic Step">' +
 
             '<div class="foot-name">PRAGMATIC<span>STEP</span></div></div>' +
-            '<div class="foot-tag">Specification Growth Partner &middot; Building Material Brands &middot; India</div>' +
+            '<div class="foot-tag">Specification-Led Project Growth Partner &middot; Building Material Brands &middot; India</div>' +
             '</div>' +
             '<div class="foot-legal">&copy; 2026 Pragmatic Step</div>' +
             '</footer>';

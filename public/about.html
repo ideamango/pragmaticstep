@@ -515,6 +515,8 @@
       letter-spacing: .07em;
     }
 
+    .journey-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; }
+
     .timeline-sect {
       padding: 7rem 3.5rem;
       background: var(--ink);
@@ -1299,6 +1301,10 @@
         position: static;
       }
 
+      .journey-grid {
+        grid-template-columns: 1fr;
+      }
+
       .timeline::before {
         left: 20px;
         transform: none;
@@ -1484,7 +1490,7 @@
           <p class="narr-body">Pragmatic Step was built to create that system &#8212; inside the organisation, not outside it.</p>
         </div>
         <div class="reveal rd1">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-bottom:1px;">
+          <div class="journey-grid" style="margin-bottom:1px;">
             <div style="padding:2rem;background:rgba(255,255,255,.025);border:1px solid rgba(248, 245, 245, 0.055);">
               <div
                 style="font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem;">
@@ -1508,7 +1514,7 @@
                 dynamics of each, understood from the inside.</div>
             </div>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;">
+          <div class="journey-grid">
             <div style="padding:2rem;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.055);">
               <div
                 style="font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin-bottom:.6rem;">

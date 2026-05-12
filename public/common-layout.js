@@ -8,7 +8,6 @@
     function buildHeader(activeFile) {
         var links = [
             { href: "index.html", label: "Home" },
-            { href: "routes.html", label: "Three Routes" },
             { href: "playbook.html", label: "The Playbook" },
             { href: "program.html", label: "The Program" },
             { href: "about.html", label: "About Us" }

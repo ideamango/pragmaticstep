@@ -1322,7 +1322,7 @@
       border: none;
       background: var(--teal);
       color: var(--navy);
-      padding: 13px 14px;
+      padding: 16px 20px;
       font-family: var(--f-body);
       font-size: 0.76rem;
       font-weight: 700;
@@ -1568,6 +1568,16 @@
 
       .hero-content {
         padding-top: 24px;
+      }
+
+      @media(max-width:480px) {
+        .hero, .belief, .cycle, .stakeholders, .program, .contact-section, .cta-section {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+        .hero-h1 {
+          font-size: 2.0rem;
+        }
       }
 
       .hero-stats {
@@ -2137,8 +2147,21 @@
 }
 @media(max-width:600px){
   .ps6-wrap{padding:60px 24px}
-  .ps6-grid{grid-template-columns:repeat(2,1fr)}
+  .ps6-grid{grid-template-columns:1fr}
   .ps6-hed{font-size:2.2rem}
+}
+
+@media (max-width: 480px) {
+  .hero, .belief, .cycle, .stakeholders, .program, .contact-section, .cta-section {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  .hero-h1 {
+    font-size: 2.8rem;
+  }
+  .btn-cp, .btn-cg, .submit-btn, .ps6-ctalink {
+    padding: 18px 32px !important;
+  }
 }
 </style>
 

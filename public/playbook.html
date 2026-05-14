@@ -854,8 +854,12 @@
         justify-content: flex-start;
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding: 14px 0 0 0;
+        padding: 14px 40px 10px 0;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .pb-strip::-webkit-scrollbar {
+        display: none;
       }
 
       .pb-strip-item {
@@ -973,12 +977,9 @@
 
       /* Strip */
       .pb-strip {
-        display: flex;
-        /* justify-content: flex-start; */
-        gap: 8px;
-        padding: 14px 0 0 0;
-        overflow-x: auto;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        padding: 14px 32px 10px 0;
+        gap: 6px;
       }
 
       .pb-strip-item {

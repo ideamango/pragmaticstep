@@ -445,6 +445,74 @@
     .discovery-left { position: static; }
     .questions-block { grid-template-columns: 1fr; }
   }
+  /* ── PARTNERSHIP SECTION (FIX, BUILD, SCALE) ── */
+  #partnership h2 { font-family: "Bebas Neue", sans-serif; font-size: clamp(2.2rem, 4.5vw, 4rem); text-transform: uppercase; margin-bottom: 2rem; color: var(--paper); }
+  .partnership-intro { max-width: 850px; margin-bottom: 4rem; }
+  .partnership-intro p { font-size: 1.05rem; color: var(--mist); line-height: 1.75; margin-bottom: 1.5rem; }
+  .partnership-intro strong { color: var(--teal); }
+
+  .phases-container { display: flex; flex-direction: column; gap: 3rem; margin-bottom: 5rem; }
+  /* --- GROWTH PARTNERSHIP / TRANSFORMATION ENGAGEMENT --- */
+  .phase-block { margin-bottom: 5rem; }
+  .phase-block:last-of-type { margin-bottom: 0; }
+  .phase-header { display: flex; align-items: flex-start; gap: 2rem; margin-bottom: 2.5rem; }
+  .phase-badge { flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; border: 1px solid transparent; }
+  .badge-fix { background: rgba(42, 191, 170, 0.1); color: var(--teal); border-color: rgba(42, 191, 170, 0.2); }
+  .badge-build { background: var(--ink-deep); color: var(--teal); border-color: var(--teal); }
+  .badge-scale { background: var(--teal); color: var(--ink-deep); }
+  
+  .phase-title-block h3 { margin-bottom: 0.5rem; color: var(--white); font-size: 2rem; }
+  .phase-tagline { font-size: 1.1rem; color: var(--muted); font-style: italic; font-family: "IBM Plex Serif", serif; }
+  
+  .phase-body { padding-left: 6rem; }
+  @media (max-width: 768px) {
+    .phase-header { flex-direction: column; gap: 1rem; }
+    .phase-body { padding-left: 0; }
+  }
+
+  .phase-body p { font-size: 1.1rem; color: var(--mist); line-height: 1.8; margin-bottom: 1.5rem; }
+  
+  .phase-focus-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2.5rem 0; }
+  .phase-focus-item { background: rgba(255,255,255,0.03); border: 1px solid var(--border-soft); padding: 1.5rem; border-radius: 8px; font-size: 0.95rem; color: var(--mist); line-height: 1.6; }
+  .phase-focus-item strong { display: block; color: var(--teal); margin-bottom: 0.5rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .phase-outputs { background: rgba(42, 191, 170, 0.04); border: 1px solid rgba(42, 191, 170, 0.15); border-radius: 12px; padding: 2.5rem; margin-bottom: 2.5rem; }
+  .phase-outputs-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.5rem; display: block; }
+  .output-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .output-list li { font-size: 1rem; color: var(--white); padding-left: 1.8rem; position: relative; line-height: 1.5; }
+  .output-list li::before { content: "→"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
+  
+  .phase-principle { font-size: 1.1rem; color: var(--mist); font-style: italic; border-left: 2px solid var(--teal); padding: 1.5rem 0 1.5rem 2.5rem; background: rgba(42, 191, 170, 0.02); font-family: "IBM Plex Serif", serif; line-height: 1.7; margin: 3rem 0; }
+
+  /* Build Phase Custom Grid */
+  .build-focuses { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; }
+  .build-focus { background: rgba(255,255,255,0.02); border: 1px solid var(--border-soft); border-radius: 12px; padding: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; }
+  .build-focus:hover { border-color: rgba(42, 191, 170, 0.4); transform: translateY(-4px); background: rgba(255,255,255,0.04); }
+  .build-focus-header { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .build-focus-num { font-size: 0.75rem; font-weight: 700; color: var(--teal); font-family: 'DM Mono', monospace; }
+  .build-focus-title h4 { margin: 0; font-size: 1.5rem; color: var(--white); font-family: "Bebas Neue", sans-serif; letter-spacing: 0.05em; }
+  .build-focus-title span { font-size: 0.85rem; color: var(--mist); display: block; margin-top: 0.2rem; }
+  .build-focus p { font-size: 1rem; color: var(--mist); margin-bottom: 1.5rem; line-height: 1.6; }
+  .build-focus-output { font-size: 0.85rem; color: var(--mist); padding-top: 1.5rem; border-top: 1px solid var(--border-soft); line-height: 1.5; }
+  .build-focus-output strong { color: var(--teal); font-weight: 600; margin-right: 0.5rem; }
+
+  /* Scale Components */
+  .signals-grid { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem; }
+  .signal-item { display: flex; align-items: flex-start; gap: 1.5rem; padding: 1.5rem 2rem; background: rgba(255,255,255,0.02); border: 1px solid var(--border-soft); border-radius: 12px; transition: border-color 0.3s; }
+  .signal-item:hover { border-color: rgba(42, 191, 170, 0.3); }
+  .signal-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); margin-top: 0.6rem; flex-shrink: 0; box-shadow: 0 0 12px var(--teal); }
+  .signal-item p { font-size: 1.05rem; color: var(--white); margin: 0; line-height: 1.5; }
+
+  .rhythm-table { width: 100%; border-collapse: collapse; margin-bottom: 2.5rem; }
+  .rhythm-table th { text-align: left; font-size: 0.75rem; font-weight: 700; color: var(--muted); padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border-soft); text-transform: uppercase; letter-spacing: 0.1em; }
+  .rhythm-table td { padding: 1.5rem; font-size: 1rem; color: var(--mist); border-bottom: 1px solid rgba(42, 191, 170, 0.05); line-height: 1.6; vertical-align: top; }
+  .rhythm-table tr:last-child td { border-bottom: none; }
+    .phase-block { padding: 2.5rem; }
+    .phase-label { position: static; margin-bottom: 2rem; width: 60px; height: 60px; }
+    .phase-list { grid-template-columns: 1fr; gap: 1.5rem; }
+    .rhythm-table { display: block; overflow-x: auto; }
+    .rhythm-table th, .rhythm-table td { padding: 1rem; min-width: 140px; }
+  }
 </style>
   <link rel="stylesheet" href="common-header-footer.css">
 </head>
@@ -602,154 +670,198 @@
   </div>
 </section>
 
-<section class="step-section" id="blueprint">
-  <div class="container">
-    <div class="step-header">
-      <div class="step-number-block">
-        <div class="step-number">02</div>
-        <div class="step-line"></div>
-      </div>
-      <div>
-        <p class="step-eyebrow">One Day. Complete Strategic Alignment.</p>
-        <h2 class="step-title">Project Growth Blueprint Day.</h2>
-        <p class="step-subtitle">FIX — Map the Gaps. Own the Direction.</p>
-        <div class="step-meta">
-          <div class="meta-pill"><strong>1 Day</strong> &nbsp;Full leadership session</div>
-          <div class="meta-pill"><strong>6</strong> &nbsp;Capabilities mapped</div>
-          <div class="meta-pill"><strong>0</strong> &nbsp;Generic frameworks</div>
+<!-- GROWTH PARTNERSHIP -->
+<section id="partnership" class="step-section">
+    <div class="container">
+        <div class="section-label">The Transformation Engagement</div>
+        <h2>The Growth Partnership.</h2>
+        
+        <div class="partnership-intro" style="margin-top: 2rem;">
+            <p>A co-pilot engagement — one full day every week, embedded into your pipeline reviews, your stakeholder strategy, your commercial decisions, and your leadership rhythm.</p>
+            <p>Applied to live projects. Real accounts. Actual pipeline. Not consulting from the outside. Building from the inside — alongside your team, on your projects, in your market.</p>
+            <p>The partnership is structured around three progressive phases — <strong>Fix, Build, and Scale.</strong> Every organisation moves through all three. The pace and depth of each phase is determined by where the organisation currently sits — not by a programme schedule.</p>
         </div>
-      </div>
-    </div>
-    <p class="step-desc">A full-day working session with your sales, business development, and leadership team. Not a presentation — a structured build. By the end of the day, your team has a shared language, a clear capability map across all six growth dimensions, and an agreed strategic direction built entirely around your product category and market.</p>
-    <p class="step-desc">Everything is designed from scratch around your reality — your stakeholder universe, your specification dynamics, your pipeline, your competitive context. Nothing is carried over from another client's engagement. The day is structured around all six capabilities — each one mapped, agreed, and owned by your team before the session closes.</p>
-    <p class="sub-label">What Your Team Walks Away With</p>
-    <div class="deliverables">
-      <div class="deliv-item">Project life cycle map — category specific</div>
-      <div class="deliv-item">Six-capability strategy framework — agreed and owned</div>
-      <div class="deliv-item">Live stakeholder map with engagement protocols</div>
-      <div class="deliv-item">Key account and BD opportunity map</div>
-      <div class="deliv-item">Master specification template for your products</div>
-      <div class="deliv-item">Session action plan with clear ownership and next actions</div>
-    </div>
-  </div>
-</section>
 
-<section class="step-section" id="bootcamp">
-  <div class="container">
-    <div class="step-header">
-      <div class="step-number-block">
-        <div class="step-number">03</div>
-        <div class="step-line"></div>
-      </div>
-      <div>
-        <p class="step-eyebrow">Four Weeks. Real Projects. Permanent Capability.</p>
-        <h2 class="step-title">Project Growth Bootcamp.</h2>
-        <p class="step-subtitle">BUILD — System Built on Live Pipeline.</p>
-        <div class="step-meta">
-          <div class="meta-pill"><strong>4</strong> &nbsp;Focused days</div>
-          <div class="meta-pill"><strong>Real</strong> &nbsp;Projects — not simulations</div>
-          <div class="meta-pill"><strong>6</strong> &nbsp;Capabilities built</div>
-        </div>
-      </div>
-    </div>
-    <p class="step-desc">One focused day per week, over four weeks. Every session is applied directly to your live projects, your real accounts, and your actual pipeline. The Blueprint gave you the strategic direction. The Bootcamp builds the system.</p>
-    <p class="step-desc">Each week has a distinct focus — and each week builds on the one before it. By Week 4, the team is not learning a new skill. They are applying a fully developed capability to live commercial decisions.</p>
-    <p class="sub-label">The Transformation Arc</p>
-    <div class="week-grid">
-      <div class="week-card">
-        <div class="week-header">
-          <div class="week-num">WEEK 01</div>
-          <div class="week-name">Foundation</div>
-          <div class="week-tag">Project Sales · Pipeline · BD</div>
-        </div>
-        <div class="week-body">
-          <p>The starting point. We establish the foundation — pipeline qualification discipline, business development conversation approach, and stakeholder mapping applied to your live project universe. The team shifts from chasing every enquiry to pursuing the right projects at the right stage. By the end of Week 1, every active project has been assessed, classified, and assigned a clear next action.</p>
-        </div>
-      </div>
-      <div class="week-card">
-        <div class="week-header">
-          <div class="week-num">WEEK 02</div>
-          <div class="week-name">Authority</div>
-          <div class="week-tag">Specification · Technical Tools · AVL</div>
-        </div>
-        <div class="week-body">
-          <p>The credibility layer. We build the specification tools that protect your position — from master templates and technical language to approved vendor list submission strategy. The team moves from presenting products to positioning expertise. By the end of Week 2, every product has a specification template and every team member can hold a technical conversation with an architect at category-expert level.</p>
-        </div>
-      </div>
-      <div class="week-card">
-        <div class="week-header">
-          <div class="week-num">WEEK 03</div>
-          <div class="week-name">Alignment</div>
-          <div class="week-tag">Stakeholder · SME Credibility · KAM</div>
-        </div>
-        <div class="week-body">
-          <p>The protection layer. We build the stakeholder engagement system — separate presentation frameworks for each stakeholder type, a subject matter expert positioning approach for every client-facing team member, and a key account development plan for your five most important relationships. By the end of Week 3, the team understands how influence is built across the full stakeholder ecosystem — and how to protect it.</p>
-        </div>
-      </div>
-      <div class="week-card">
-        <div class="week-header">
-          <div class="week-num">WEEK 04</div>
-          <div class="week-name">Conversion</div>
-          <div class="week-tag">Commercial Conversion · Negotiation · Live Pipeline</div>
-        </div>
-        <div class="week-body">
-          <p>The commercial layer. We move from specification to revenue — reviewing every live project in the pipeline, setting negotiation positioning for each deal approaching procurement, and preparing value engineering responses. We then set up the repeatable weekly review process the team will own independently. By the end of Week 4, the team has a working commercial conversion system — not a plan for one.</p>
-        </div>
-      </div>
-    </div>
-    <p class="sub-label" style="margin-top:3rem;">What Stays With Your Team Permanently</p>
-    <div class="deliverables">
-      <div class="deliv-item">Complete specification template library</div>
-      <div class="deliv-item">Six-capability approach playbooks for Sales, BD, and KAM</div>
-      <div class="deliv-item">Stakeholder presentation decks — built per audience</div>
-      <div class="deliv-item">Key account development plans for priority accounts</div>
-      <div class="deliv-item">Commercial conversion and negotiation framework</div>
-      <div class="deliv-item">Live project review process — owned and operated independently</div>
-      <div class="deliv-item">Pipeline qualification discipline</div>
-      <div class="deliv-item">SME credibility framework — embedded in every team member</div>
-    </div>
-    <div class="quote-block">
-      <p>The Bootcamp does not teach your team how to sell better. It builds the system that makes winning repeatable — regardless of who is in the room.</p>
-    </div>
-  </div>
-</section>
+        <div class="phases-container" style="margin-top: 5rem;">
+            <!-- PHASE 01: FIX -->
+            <div class="phase-block">
+                <div class="phase-header">
+                    <div class="phase-badge badge-fix">FIX</div>
+                    <div class="phase-title-block">
+                        <h3>See the Full Picture.</h3>
+                        <div class="phase-tagline">Clarity before construction.</div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <p>The partnership begins here — regardless of where the organisation is. Before anything is built, the full reality of the project sales system is mapped across all six capabilities. Not by Pragmatic Step. By the leadership team itself.</p>
+                    <p>The Fix phase is a structured, facilitated experience in which the team maps their own position, names their own gaps, and agrees their own direction. The output is not a consultant's assessment. It is the team's shared understanding of where they are — and what they need to build first.</p>
+                    <p>The Fix phase is complete when the leadership team has a clear, honest, agreed picture of their current position — and a shared conviction about what to change. That conviction is the foundation everything else is built on.</p>
+                    
+                    <div class="phase-outputs">
+                        <span class="phase-outputs-label">What the Fix phase produces</span>
+                        <ul class="output-list">
+                            <li>A six-capability maturity map — agreed by the team, not imposed externally</li>
+                            <li>Priority gaps named in the leadership team's own language</li>
+                            <li>A clear, shared direction for what the Build phase will construct</li>
+                            <li>Common language across sales, business development, and leadership</li>
+                            <li>The confidence that comes from understanding the gap precisely</li>
+                        </ul>
+                    </div>
+                    <div class="phase-principle">
+                        "A gap named by a consultant is questioned. A gap named by the team is owned. Only the gap they own creates the desire to close it."
+                    </div>
+                </div>
+            </div>
 
-<section class="step-section" id="partner">
-  <div class="container">
-    <div class="step-header">
-      <div class="step-number-block">
-        <div class="step-number">04</div>
-        <div class="step-line"></div>
-      </div>
-      <div>
-        <p class="step-eyebrow">Ongoing. Embedded. Across All Six Capabilities.</p>
-        <h2 class="step-title">Project Growth Partner.</h2>
-        <p class="step-subtitle">SCALE — System Runs and Compounds.</p>
-        <div class="step-meta">
-          <div class="meta-pill"><strong>½ Day</strong> &nbsp;Embedded every week</div>
-          <div class="meta-pill"><strong>52</strong> &nbsp;Live project reviews per year</div>
-          <div class="meta-pill"><strong>12</strong> &nbsp;Management reports per year</div>
+            <!-- PHASE 02: BUILD -->
+            <div class="phase-block">
+                <div class="phase-header">
+                    <div class="phase-badge badge-build">BUILD</div>
+                    <div class="phase-title-block">
+                        <h3>Build the System on Live Pipeline.</h3>
+                        <div class="phase-tagline">Not trained. Built.</div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <p>Once the direction is agreed, the system is built — applied directly to live projects, real accounts, and actual pipeline. Not in a classroom. Not on simulations. On the commercial reality the team is working inside right now.</p>
+                    <p>The Build phase moves through four distinct focuses — each constructing a layer of the project growth system, each applied to live pipeline so the system is running before the phase concludes. The depth and sequence of these focuses is shaped by what the Fix phase revealed.</p>
+                    
+                    <div class="build-focuses">
+                        <div class="build-focus">
+                            <div class="build-focus-header">
+                                <div class="build-focus-num">01</div>
+                                <div class="build-focus-title">
+                                    <h4>Foundation</h4>
+                                    <span>Pipeline Discipline & Business Development</span>
+                                </div>
+                            </div>
+                            <p>The base layer. Pipeline qualification discipline is established — the team shifts from chasing every enquiry to pursuing the right projects at the right stage. Business development strategy is designed around SME-led engagement, not product promotion.</p>
+                            <div class="build-focus-output">
+                                <strong>What gets built:</strong> Stage-mapped pipeline across all active projects · Qualification criteria specific to this category and market · Structured intelligence routine · BD target map
+                            </div>
+                        </div>
+
+                        <div class="build-focus">
+                            <div class="build-focus-header">
+                                <div class="build-focus-num">02</div>
+                                <div class="build-focus-title">
+                                    <h4>Authority</h4>
+                                    <span>Specification Authority & Technical Tools</span>
+                                </div>
+                            </div>
+                            <p>The influence layer. Technical specifications are moved from 'product data' to 'specification authority'. We build the tools and the conversation frameworks that allow your team to lead the architect or consultant — rather than responding to them.</p>
+                            <div class="build-focus-output">
+                                <strong>What gets built:</strong> Authority-led conversation frameworks · Specification-grade technical tools (BIM, Calculators, Whitepapers) · Value Engineering response playbooks
+                            </div>
+                        </div>
+
+                        <div class="build-focus">
+                            <div class="build-focus-header">
+                                <div class="build-focus-num">03</div>
+                                <div class="build-focus-title">
+                                    <h4>Alignment</h4>
+                                    <span>Commercial Strategy & Stakeholder Management</span>
+                                </div>
+                            </div>
+                            <p>The alignment layer. Project sales involve multiple stakeholders — architects, consultants, contractors, and owners. We build the system to map these stakeholders and align your value proposition to each persona effectively.</p>
+                            <div class="build-focus-output">
+                                <strong>What gets built:</strong> Stakeholder mapping matrix · Alignment playbooks for each persona · CRM workflow integration · Inter-departmental handoff system
+                            </div>
+                        </div>
+
+                        <div class="build-focus">
+                            <div class="build-focus-header">
+                                <div class="build-focus-num">04</div>
+                                <div class="build-focus-title">
+                                    <h4>Conversion</h4>
+                                    <span>Deal Strategy & Negotiation Playbooks</span>
+                                </div>
+                            </div>
+                            <p>The commercial layer. Three distinct conversion scenarios — specified to order, approved list selection, and late-entry value engineering — each get a structured playbook. Negotiation positioning is built per deal.</p>
+                            <div class="build-focus-output">
+                                <strong>What gets built:</strong> Scenario A, B, and C commercial playbooks · Negotiation framework with agreed positions · Weekly pipeline review format
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phase-principle">
+                        "Training builds knowledge that fades. Building builds systems that run. The Build phase is complete when the system is installed — not in a document, but in the team's behaviour, pipeline discipline, and commercial decisions."
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHASE 03: SCALE -->
+            <div class="phase-block">
+                <div class="phase-header">
+                    <div class="phase-badge badge-scale">SCALE</div>
+                    <div class="phase-title-block">
+                        <h3>Compound the System.</h3>
+                        <div class="phase-tagline">Make growth structural.</div>
+                    </div>
+                </div>
+                <div class="phase-body">
+                    <p>The Scale phase is where the system stops being an initiative and becomes the operating model. The Growth Partnership is fully embedded — into the weekly pipeline review, the stakeholder strategy decisions, and the leadership rhythm.</p>
+                    <p>This is the commercially significant phase of the arc. It is where the compounding signals begin to appear — the observable moments that indicate the system has moved beyond installation into self-sustaining growth.</p>
+                    
+                    <div class="phase-outputs">
+                        <span class="phase-outputs-label" style="color:var(--teal);">The compounding signals we watch for</span>
+                        <div class="signals-grid">
+                            <div class="signal-item">
+                                <div class="signal-dot"></div>
+                                <p>An architect calls your team before writing the specification — not for pricing, but for technical opinion.</p>
+                            </div>
+                            <div class="signal-item">
+                                <div class="signal-dot"></div>
+                                <p>A contractor flags a substitution to your rep before accepting it — because they know the conversation needs to happen first.</p>
+                            </div>
+                            <div class="signal-item">
+                                <div class="signal-dot"></div>
+                                <p>A key account recommends your organisation to a peer firm — unprompted, without being asked.</p>
+                            </div>
+                            <div class="signal-item">
+                                <div class="signal-dot"></div>
+                                <p>The pipeline forecast at the start of the month is within 15% of actual orders. Conversion is structural.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rhythm-section">
+                        <span class="phase-outputs-label">The Scale operating rhythm</span>
+                        <table class="rhythm-table">
+                            <thead>
+                                <tr>
+                                    <th>Rhythm</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Weekly</td>
+                                    <td>Live pipeline review — every project, every conversion scenario, every next action. Commitments tracked and opened the following week.</td>
+                                </tr>
+                                <tr>
+                                    <td>As needed</td>
+                                    <td>Live deal strategy — specification at risk, negotiation support, value engineering response. Within 48 hours of a flag being raised.</td>
+                                </tr>
+                                <tr>
+                                    <td>Monthly</td>
+                                    <td>Leadership review — KPI dashboard, capability progress, strategic decisions, market intelligence.</td>
+                                </tr>
+                                <tr>
+                                    <td>Quarterly</td>
+                                    <td>Capability re-assessment — six-capability movement mapped against starting position. Direction confirmed. Next phase priorities agreed.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="phase-principle">
+                        "A system that runs only when the partner is present is not a system. Rajneesh's role in the Scale phase shifts progressively — from co-builder to strategic partner — as the system embeds and the team owns it completely."
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <p class="step-desc">Half a day, every week. Embedded directly into your pipeline reviews, your stakeholder strategy decisions, your commercial conversion conversations, and your management reporting.</p>
-    <p class="step-desc">Everything built in the Bootcamp — now running continuously. Not as a training programme. As a co-pilot seat in your operations, across all six capabilities, applied to every live deal and every important relationship.</p>
-    <p class="sub-label">What Is Embedded Every Week</p>
-    <div class="deliverables">
-      <div class="deliv-item">Live project review — every project, every route, every next action</div>
-      <div class="deliv-item">Stakeholder strategy guidance — real time, project specific</div>
-      <div class="deliv-item">Commercial conversion and negotiation support — live deals</div>
-      <div class="deliv-item">Key account development — ongoing across priority relationships</div>
-      <div class="deliv-item">CRM discipline and pipeline tracking</div>
-      <div class="deliv-item">Weekly management report — pipeline health and conversion metrics</div>
-      <div class="deliv-item">Monthly strategic review with leadership</div>
-      <div class="deliv-item">BD and new market development — ongoing alongside current pipeline</div>
-    </div>
-    <div class="quote-block">
-      <p>This is not a retainer. It is a co-pilot seat. I am in your project reviews, your stakeholder strategy calls, your commercial conversion conversations, and your management meetings — until project-winning growth becomes your operating system, not an initiative.</p>
-    </div>
-    <p style="font-size:0.82rem; color:var(--muted); margin-top:2rem; font-style:italic;">I work with a small number of organisations at any given time — deeply, not broadly.</p>
-  </div>
 </section>
 
 <section class="comparison">

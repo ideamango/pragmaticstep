@@ -143,11 +143,26 @@
     display: block;
   }
   .p-hero-sub {
-    font-size: .95rem;
-    color: var(--offwhite);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: var(--white);
+    line-height: 1.6;
     max-width: 600px;
-    line-height: 1.78;
-    margin-bottom: 2.8rem;
+    margin-bottom: 2rem;
+  }
+  .p-hero-sub strong {
+    color: var(--teal);
+    text-shadow: 0 0 15px rgba(42, 191, 170, 0.35);
+    font-weight: 700;
+  }
+  .p-hero-promise {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--white);
+    max-width: 620px;
+    font-style: italic;
+    border-left: 3px solid var(--teal);
+    padding-left: 24px;
+    margin-top: 2rem;
   }
   .jump-nav {
     display: flex;
@@ -407,6 +422,29 @@
   .d1 { transition-delay: 0.15s; }
   .d2 { transition-delay: 0.3s; }
   .d3 { transition-delay: 0.45s; }
+  /* ── DISCOVERY SECTION RE-LAYOUT ── */
+  .discovery-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+  .discovery-left { position: sticky; top: 120px; }
+  .discovery-tag { display: inline-block; padding: 6px 14px; background: rgba(42, 191, 170, 0.08); border: 1px solid rgba(42, 191, 170, 0.25); color: var(--teal); font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 4px; margin-bottom: 1.5rem; }
+  .discovery-left h2 { font-family: "Bebas Neue", sans-serif; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 1.5rem; text-transform: uppercase; color: var(--paper); }
+  .discovery-left p { font-size: 1rem; color: var(--mist); line-height: 1.7; margin-bottom: 1.5rem; }
+  
+  .questions-block { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
+  .question-card { background: var(--ink-mid); border: 1px solid var(--border-soft); border-left: 3px solid var(--teal); padding: 1.5rem; transition: transform 0.2s, border-color 0.2s; border-radius: 4px; }
+  .question-card:hover { transform: translateX(5px); border-color: rgba(42, 191, 170, 0.4); }
+  .question-number { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--teal); font-weight: 600; display: block; margin-bottom: 0.8rem; opacity: 0.7; }
+  .question-card p { font-size: 0.95rem; font-weight: 500; color: var(--white); line-height: 1.4; margin-bottom: 0.6rem; }
+  .question-sub { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+  
+  .discovery-footer { margin-top: 3rem; padding: 1.8rem 2.2rem; background: rgba(42, 191, 170, 0.03); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; gap: 2rem; }
+  .discovery-footer p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+  .discovery-footer p strong { color: var(--teal); display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+  
+  @media (max-width: 991px) {
+    .discovery-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .discovery-left { position: static; }
+    .questions-block { grid-template-columns: 1fr; }
+  }
 </style>
   <link rel="stylesheet" href="common-header-footer.css">
 </head>
@@ -426,16 +464,14 @@
         <div class="hero-eyebrow-text">Pragmatic Step &middot; The Program</div>
       </div>
       <h1 class="p-hero-title">A Project<br><strong>Growth Partnership</strong></h1>
-      <!-- <p class="p-hero-sub">Not a training course. Not a workshop. A structured, field-tested engagement designed to
-        make specification your primary commercial engine &#8212; built entirely around your products, your market, and
-        your team.</p> -->
-      <br>
-      <div class="jump-nav">
-        <a href="#discovery" class="jn-pill active">01 &nbsp;Discovery Call</a>
-        <a href="#blueprint" class="jn-pill">02 &nbsp;Blueprint Day</a>
-        <a href="#bootcamp" class="jn-pill">03 &nbsp;Bootcamp</a>
-        <a href="#growth" class="jn-pill">04 &nbsp;Growth Partner</a>
-      </div>
+      <p class="p-hero-sub">
+        You're not underperforming.<br>
+        Your system is.<br>
+        <strong>Fix. Build. Scale.</strong>
+      </p>
+      <p class="p-hero-promise">
+        If the growth you deserve isn't showing up — the answer isn't more effort. It's a better system behind the effort.
+      </p>
     </div>
   </div>
 <section class="philosophy">
@@ -528,26 +564,40 @@
 
 <section class="step-section" id="discovery">
   <div class="container">
-    <div class="step-header">
-      <div class="step-number-block">
-        <div class="step-number">01</div>
-        <div class="step-line"></div>
+    <div class="discovery-layout">
+      <div class="discovery-left">
+        <span class="discovery-tag">Step 01 —— Discovery</span>
+        <h2 class="step-title">Where Every Engagement Begins.</h2>
+        <p>A direct, diagnostic conversation about your current project sales reality — where you win, where you lose, and where you are not even in the room when decisions are made.</p>
+        <p>If there is a clear fit, we outline what a structured engagement would look like. If there is not, we say so directly.</p>
       </div>
-      <div>
-        <p class="step-eyebrow">Where Every Engagement Begins</p>
-        <h2 class="step-title">Discovery Call.</h2>
-        <p class="step-subtitle">A Diagnosis. Not a Pitch.</p>
-        <div class="step-meta">
-          <div class="meta-pill"><strong>1 Hour</strong> &nbsp;Structured conversation</div>
-          <div class="meta-pill"><strong>No Cost</strong> &nbsp;No obligation</div>
-          <div class="meta-pill"><strong>No Deck</strong> &nbsp;No sales performance</div>
+      <div class="discovery-right">
+        <div class="questions-block">
+          <div class="question-card">
+            <span class="question-number">01</span>
+            <p>Where are you losing specifications?</p>
+            <span class="question-sub">At the design stage, through value engineering, or at the contractor's order?</span>
+          </div>
+          <div class="question-card">
+            <span class="question-number">02</span>
+            <p>Is your pipeline an engine or a list?</p>
+            <span class="question-sub">Are you identifying projects at Stage 01–02 or reacting to tenders at Stage 04?</span>
+          </div>
+          <div class="question-card">
+            <span class="question-number">03</span>
+            <p>Does your team present or position?</p>
+            <span class="question-sub">Are they showing product decks or earning authority as technical subject matter experts?</span>
+          </div>
+          <div class="question-card">
+            <span class="question-number">04</span>
+            <p>Are your accounts managed or maintained?</p>
+            <span class="question-sub">Are you building institutional relationships that compound, or just chasing the next quote?</span>
+          </div>
         </div>
       </div>
     </div>
-    <p class="step-desc">One hour. A direct, diagnostic conversation about your current project sales reality — where you win, where you lose, and where you are not even in the room when decisions are made.</p>
-    <p class="step-desc">If there is a clear fit, we outline what a structured engagement would look like. If there is not, we say so directly.</p>
-    <div class="quote-block">
-      <p>Every engagement begins with understanding your reality. Not presenting ours.</p>
+    <div class="discovery-footer">
+      <p><strong>Outcome</strong> One hour. No pitch. No deck. A clear diagnosis of your growth gaps and a defined path forward — whether that involves me or not.</p>
     </div>
   </div>
 </section>

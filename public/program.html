@@ -517,8 +517,37 @@
     .phase-block { padding: 2.5rem; }
     .phase-label { position: static; margin-bottom: 2rem; width: 60px; height: 60px; }
     .phase-list { grid-template-columns: 1fr; gap: 1.5rem; }
-    .rhythm-table { display: block; overflow-x: auto; }
-    .rhythm-table th, .rhythm-table td { padding: 1rem; min-width: 140px; }
+    .rhythm-table, .rhythm-table thead, .rhythm-table tbody, .rhythm-table th, .rhythm-table td, .rhythm-table tr {
+      display: block;
+    }
+    .rhythm-table thead {
+      display: none;
+    }
+    .rhythm-table tr {
+      border: 1px solid var(--border-soft);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.2rem;
+      background: rgba(255, 255, 255, 0.015);
+    }
+    .rhythm-table td {
+      border: none;
+      padding: 0;
+      min-width: auto !important;
+    }
+    .rhythm-table td:first-child {
+      font-weight: 700;
+      color: var(--teal);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .rhythm-table td:last-child {
+      color: var(--mist);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
     .build-focuses { grid-template-columns: 1fr; }
     .phase-focus-grid { grid-template-columns: 1fr; }
     .output-list { grid-template-columns: 1fr; }

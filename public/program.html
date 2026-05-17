@@ -45,18 +45,21 @@
     --ink-mid: #1e2e32;
     --ink-soft: #2c3e42;
     --slate: #4a5d62;
-    --muted: #7a8e93;
+    --muted: rgba(255, 255, 255, 0.75);
     --pale: #f0f6f5;
     --border: rgba(42,191,170,0.18);
     --border-soft: rgba(42,191,170,0.10);
     --white: #ffffff;
-    --paper: #f5f0e8;
+    --paper: #ffffff;
     --offwhite: #ffffff;
-    --mist: #8a9aaa;
+    --mist: rgba(255, 255, 255, 0.75);
+    --f-head: 'Barlow Condensed', sans-serif;
+    --f-body: 'Barlow', sans-serif;
+    --f-serif: 'Cormorant Garamond', Georgia, serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Sora', sans-serif; background: var(--ink); color: var(--white); line-height: 1.7; overflow-x: hidden; }
+  body { font-family: var(--f-body); background: var(--ink); color: var(--white); line-height: 1.7; overflow-x: hidden; }
 
   /* ── PRESERVED HERO STYLES ── */
   .p-hero {
@@ -196,10 +199,10 @@
   /* ── NEW STYLES ── */
   section { padding: 5rem 2rem; }
   .container { max-width: 1100px; margin: 0 auto; }
-  .section-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--teal); font-weight: 600; margin-bottom: 0.75rem; }
-  .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.2; color: var(--white); margin-bottom: 1rem; }
-  .section-title em { font-style: italic; color: var(--teal); }
-  .section-sub { font-size: 0.95rem; color: var(--muted); max-width: 580px; line-height: 1.8; }
+  .section-label { font-family: var(--f-body); font-size: 1.2rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+  .section-title { font-family: var(--f-head); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.02; margin-bottom: 12px; color: var(--white); }
+  .section-title em { font-style: normal; color: var(--teal); }
+  .section-sub { font-family: var(--f-body); font-size: 1.05rem; font-weight: 400; color: rgba(255, 255, 255, 0.72); line-height: 1.75; max-width: 580px; margin-bottom: 56px; }
   .section-header { margin-bottom: 3.5rem; }
 
   .philosophy { background: var(--ink-mid); }
@@ -426,7 +429,7 @@
   .discovery-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
   .discovery-left { position: sticky; top: 120px; }
   .discovery-tag { display: inline-block; padding: 6px 14px; background: rgba(42, 191, 170, 0.08); border: 1px solid rgba(42, 191, 170, 0.25); color: var(--teal); font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 4px; margin-bottom: 1.5rem; }
-  .discovery-left h2 { font-family: "Bebas Neue", sans-serif; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; margin-bottom: 1.5rem; text-transform: uppercase; color: var(--paper); }
+  .discovery-left h2 { font-family: var(--f-head); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.02; margin-bottom: 12px; color: var(--white); }
   .discovery-left p { font-size: 1rem; color: var(--mist); line-height: 1.7; margin-bottom: 1.5rem; }
   
   .questions-block { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
@@ -446,9 +449,9 @@
     .questions-block { grid-template-columns: 1fr; }
   }
   /* ── PARTNERSHIP SECTION (FIX, BUILD, SCALE) ── */
-  #partnership h2 { font-family: "Bebas Neue", sans-serif; font-size: clamp(2.2rem, 4.5vw, 4rem); text-transform: uppercase; margin-bottom: 2rem; color: var(--paper); }
+  #partnership h2 { font-family: var(--f-head); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.02; margin-bottom: 12px; color: var(--white); }
   .partnership-intro { max-width: 850px; margin-bottom: 4rem; }
-  .partnership-intro p { font-size: 1.05rem; color: var(--mist); line-height: 1.75; margin-bottom: 1.5rem; }
+  .partnership-intro p { font-family: var(--f-body); font-size: 1.05rem; color: var(--mist); line-height: 1.75; margin-bottom: 1.5rem; }
   .partnership-intro strong { color: var(--teal); }
 
   .phases-container { display: flex; flex-direction: column; gap: 3rem; margin-bottom: 5rem; }
@@ -461,8 +464,8 @@
   .badge-build { background: var(--ink-deep); color: var(--teal); border-color: var(--teal); }
   .badge-scale { background: var(--teal); color: var(--ink-deep); }
   
-  .phase-title-block h3 { margin-bottom: 0.5rem; color: var(--white); font-size: 2rem; }
-  .phase-tagline { font-size: 1.1rem; color: var(--muted); font-style: italic; font-family: "IBM Plex Serif", serif; }
+  .phase-title-block h3 { margin-bottom: 0.5rem; color: var(--white); font-size: 2rem; font-family: var(--f-head); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; }
+  .phase-tagline { font-size: 1.1rem; color: var(--muted); font-style: italic; font-family: var(--f-serif); }
   
   .phase-body { padding-left: 6rem; }
   @media (max-width: 768px) {
@@ -482,7 +485,7 @@
   .output-list li { font-size: 1rem; color: var(--white); padding-left: 1.8rem; position: relative; line-height: 1.5; }
   .output-list li::before { content: "→"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
   
-  .phase-principle { font-size: 1.1rem; color: var(--mist); font-style: italic; border-left: 2px solid var(--teal); padding: 1.5rem 0 1.5rem 2.5rem; background: rgba(42, 191, 170, 0.02); font-family: "IBM Plex Serif", serif; line-height: 1.7; margin: 3rem 0; }
+  .phase-principle { font-size: 1.1rem; color: var(--mist); font-style: italic; border-left: 2px solid var(--teal); padding: 1.5rem 0 1.5rem 2.5rem; background: rgba(42, 191, 170, 0.02); font-family: var(--f-serif); line-height: 1.7; margin: 3rem 0; }
 
   /* Build Phase Custom Grid */
   .build-focuses { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; }
@@ -490,7 +493,7 @@
   .build-focus:hover { border-color: rgba(42, 191, 170, 0.4); transform: translateY(-4px); background: rgba(255,255,255,0.04); }
   .build-focus-header { display: flex; gap: 1.5rem; margin-bottom: 1.5rem; }
   .build-focus-num { font-size: 0.75rem; font-weight: 700; color: var(--teal); font-family: 'DM Mono', monospace; }
-  .build-focus-title h4 { margin: 0; font-size: 1.5rem; color: var(--white); font-family: "Bebas Neue", sans-serif; letter-spacing: 0.05em; }
+  .build-focus-title h4 { margin: 0; font-size: 1.5rem; color: var(--white); font-family: var(--f-head); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
   .build-focus-title span { font-size: 0.85rem; color: var(--mist); display: block; margin-top: 0.2rem; }
   .build-focus p { font-size: 1rem; color: var(--mist); margin-bottom: 1.5rem; line-height: 1.6; }
   .build-focus-output { font-size: 0.85rem; color: var(--mist); padding-top: 1.5rem; border-top: 1px solid var(--border-soft); line-height: 1.5; }
@@ -634,7 +637,7 @@
     <div class="discovery-layout">
       <div class="discovery-left">
         <span class="discovery-tag">Step 01 —— Discovery</span>
-        <h2 class="step-title">Where Every Engagement Begins.</h2>
+        <h2 class="section-title">Where Every Engagement Begins.</h2>
         <p>A direct, diagnostic conversation about your current project sales reality — where you win, where you lose, and where you are not even in the room when decisions are made.</p>
         <p>If there is a clear fit, we outline what a structured engagement would look like. If there is not, we say so directly.</p>
       </div>
@@ -673,7 +676,7 @@
 <section id="partnership" class="step-section">
     <div class="container">
         <div class="section-label">The Transformation Engagement</div>
-        <h2>The Growth Partnership.</h2>
+        <h2 class="section-title">The Growth Partnership.</h2>
         
         <div class="partnership-intro" style="margin-top: 2rem;">
             <p>A co-pilot engagement — one full day every week, embedded into your pipeline reviews, your stakeholder strategy, your commercial decisions, and your leadership rhythm.</p>

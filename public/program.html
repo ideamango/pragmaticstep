@@ -323,6 +323,9 @@
     .comp-table { min-width: 640px; }
     .cap-arch-bridge { grid-template-columns: 1fr; }
     .jn-pill { padding: 6px 12px; font-size: 0.65rem; }
+    .build-focuses { grid-template-columns: 1fr; }
+    .phase-focus-grid { grid-template-columns: 1fr; }
+    .output-list { grid-template-columns: 1fr; }
   }
 
   /* ═══ CTA SECTION (Modernized from Playbook) ═════════════════ */
@@ -510,11 +513,15 @@
   .rhythm-table th { text-align: left; font-size: 0.75rem; font-weight: 700; color: var(--muted); padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border-soft); text-transform: uppercase; letter-spacing: 0.1em; }
   .rhythm-table td { padding: 1.5rem; font-size: 1rem; color: var(--mist); border-bottom: 1px solid rgba(42, 191, 170, 0.05); line-height: 1.6; vertical-align: top; }
   .rhythm-table tr:last-child td { border-bottom: none; }
+  @media (max-width: 768px) {
     .phase-block { padding: 2.5rem; }
     .phase-label { position: static; margin-bottom: 2rem; width: 60px; height: 60px; }
     .phase-list { grid-template-columns: 1fr; gap: 1.5rem; }
     .rhythm-table { display: block; overflow-x: auto; }
     .rhythm-table th, .rhythm-table td { padding: 1rem; min-width: 140px; }
+    .build-focuses { grid-template-columns: 1fr; }
+    .phase-focus-grid { grid-template-columns: 1fr; }
+    .output-list { grid-template-columns: 1fr; }
   }
 </style>
   <link rel="stylesheet" href="common-header-footer.css">
